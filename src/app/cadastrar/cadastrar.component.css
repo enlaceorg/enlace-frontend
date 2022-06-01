@@ -132,8 +132,19 @@ footer {
   }
 }
 
+.iconDentro input{
+  padding-left: 40px;
+}
 
-.imgCadastrarWidth {
-  width: 100px;
+.iconDentro{
+  position: relative;
+}
+
+.iconDentro i{
+  position: absolute;
+  left: 6px;
+  top: 28px;
+  padding: 9px 8px;
+  color: #215df2;
 }
 
