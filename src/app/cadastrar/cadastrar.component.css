@@ -99,11 +99,10 @@ label {
 }
 
 #imgLateral {
-  width: 100%;
+  width: 300px;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 30px;
-
 }
 
 footer {
@@ -132,3 +131,9 @@ footer {
   
   }
 }
+
+
+.imgCadastrarWidth {
+  width: 100px;
+}
+
