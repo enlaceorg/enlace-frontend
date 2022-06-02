@@ -20,35 +20,20 @@
                 </li>
               </ul>
             <!--<button class="btn btn-outline-success" type="submit">Search</button>-->
-            <div>
-                <button id="btnLogin">
-                    <p id="btnTextLogin">Entrar</p>
-                </button>
+            <div> <a href="" routerLink="/login">
+                  <button id="btnLogin"> 
+                        <p id="btnTextLogin">Entrar</p>
+                    </button>
+            </a>
             </div>
-            <div>
-                <button id="btnSignUp">
-                    <p id="btnTextSignUp">Cadastrar</p>
-                </button>
+
+            <div> <a href="" routerLink="/cadastrar">
+                  <button id="btnSignUp">
+                        <p id="btnTextSignUp">Cadastrar</p>
+                    </button>
+            </a>
+
             </div>
         </div>
       </div>
 </nav>
-
-<script>
-
-      var btnLogin = document.getElementById("btnLogin");
-      var btnTextLogin = document.getElementById("btnTextLogin");
-
-      var btnSignUp = document.getElementById("btnSignUp");
-      var btnTextSignUp = document.getElementById("btnTextSignUp");
-
-      btnLogin.onclick = function() {
-            btnTextLogin.innerHTML = "Entrar";
-            btnLogin.classList.add("active");
-      }
-
-      btnSignUp.onclick = function() {
-            btnTextSignUp.innerHTML = "Cadastrar";
-            btnSignUp.classList.add("active");
-      }
-</script>
