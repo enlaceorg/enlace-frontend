@@ -1,0 +1,60 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+
+    height: 70px;
+}
+
+.navbar-nav > li {
+  margin-left:5px;
+  margin-right:5px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 15pt;
+}
+
+ul.mx-auto {
+
+    margin-left: 100px !important;
+}
+
+.navbar-brand
+{
+    position: relative;
+    background: url(https://i.imgur.com/0NWMYnZ.png);
+    width: 170px;
+    height: 45px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 5%;
+    margin-left: -10px !important;
+    display: block;
+}
+
+button {
+
+    width: 180px;
+    height: 45px;
+    border: 0;
+    outline: none;
+    background: #F36C4A;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    left: 5%;
+    margin-left: 10px !important;
+    font-size: 20pt;
+}
+
+.active {
+
+    background: #545454;
+    transition: 1s;
+}
