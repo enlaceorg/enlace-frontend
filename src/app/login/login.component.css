@@ -1,11 +1,11 @@
 header{
-    position: absolute;
     right: 0;
     bottom: 0;
-    min-width: 1200px;
+    min-width: 120px;
     display: flex;
     justify-content: right;    
 }
+
 hr{
     color: black;
     border: none;
@@ -82,7 +82,7 @@ h2{
 .fundoB{
     border: 0;
     background-color: #FFC732;
-    padding-top: 50px;
+    padding-top: 90px;
     padding-right: 0,1%;
     padding-bottom: 0px;
     padding-left: 0,1px;
