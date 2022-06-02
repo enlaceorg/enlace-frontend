@@ -1,0 +1,131 @@
+header{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 1200px;
+    display: flex;
+    justify-content: right;    
+}
+hr{
+    color: black;
+    border: none;
+    height: 2px;
+    background: rgb(128, 128, 128);
+    font-family: 'Epilogue', sans-serif;
+}
+
+.fonte{
+    font-family: "Epilogue";
+}
+
+.botao{
+    margin-top: 30px; 
+    padding: 10px; 
+    background-color: #d1d1d1; 
+    color:rgb(94, 94, 94); 
+    border: 0;
+}
+
+.tamanho{
+    font-size: 30px;
+}
+
+input{
+    border: 0;
+}
+
+
+.corBotao:hover{
+    background-color:#FFC732;
+}
+
+h2{
+    background-color: white;
+    height: 100px;
+    width: 700px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 30px;
+    margin-bottom: 50px;
+   
+}
+
+.h1n1{
+    font-size: 100px;
+    height: 100px;
+    width: 600px;
+}
+
+.corona{
+    font-size: 22px;
+    height: 100px;
+    width: 600px;
+}
+
+.iconDentro input{
+    padding-left: 40px;
+}
+
+.iconDentro{
+    position: relative;
+}
+
+.iconDentro i{
+    position: absolute;
+    left: 6px;
+    top: 45px;
+    padding: 9px 8px;
+    color: #FFC732;
+}
+
+.fundoB{
+    border: 0;
+    background-color: #FFC732;
+    padding-top: 50px;
+    padding-right: 0,1%;
+    padding-bottom: 0px;
+    padding-left: 0,1px;
+}
+
+.barraFundo{
+    background-color: #f4f4f4;
+}
+       
+.botaoRedondo{
+    border-radius: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*responsividade*/
+
+@media screen and (max-width: 1440px){
+    section{
+        width: 1072px;
+    }
+}
+@media screen and (max-width: 1200px){
+    section{
+        width: 1000px;
+    }
+}
+@media screen and (max-width: 1024px){
+    section{
+        width: 700px;
+    }
+}
+@media screen and (max-width: 768px){
+    section{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 425px){
+    section{
+        width: 320px;
+    }
+}
+
+/*responsividade*/
