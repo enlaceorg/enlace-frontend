@@ -2,11 +2,9 @@ header{
     position: absolute;
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 1200px;
     display: flex;
-    justify-content: right;
-
+    justify-content: right;    
 }
 hr{
     color: black;
