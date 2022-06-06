@@ -51,7 +51,7 @@
                 <label for="senha" id="senhaLabel">Senha: </label>
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input
-                (input= confirmarSenha())
+                (input)= "confirmarSenha($event)"
                   class="form-control"
                   type="password"
                   name="senha"
@@ -83,7 +83,7 @@
             <select (change) = "selecionarTipoUsuario($event)" class="form-control" name="tipo" id="tipo">
               <option>Selecione um tipo de usuário</option>
               <option value="normal">Parceiro</option>
-              <option value="adm">ONGs</option>
+              <option value="adm">Organização não-governamental</option>
             </select>
           </div>
 
