@@ -20,7 +20,7 @@
           <div class="form-row iconDentro tamanho">
             <div class="form-group col-md-10" style="margin-left: 120px; padding-right: 0;">
               <label class="m-0" for="inputEmail4">E-mail:</label>
-              <input type="email" class="form-control barraFundo" id="inputEmail4" />
+              <input [(ngModel)]="usuarioLogin.usuarioEmail" type="email" class="form-control barraFundo" id="inputEmail4" />
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </div>
             </div>
@@ -29,11 +29,11 @@
           <div class="form-group col-md-10 iconDentro tamanho"
             style="margin-left: 120px; padding-left: 0; padding-right: 0;">
             <label class="m-0" for="inputPassword4">Senha:</label>
-            <input type="password" class="form-control barraFundo" id="inputPassword4">
+            <input [(ngModel)]="usuarioLogin.senha" type="password" class="form-control barraFundo" id="inputPassword4">
             <i class="fa fa-lock" style="top: 40px;" aria-hidden="true"></i>
 
 
-            <button type="submit" class="btn btn-warning botaoRedondo mb-4 botao corBotao"
+            <button (click)="entrar()" type="submit" class="btn btn-warning botaoRedondo mb-4 botao corBotao"
               style="width: 100%;font-size: 25px;">Entrar</button>
 
             <hr size="100" he width="100%">
