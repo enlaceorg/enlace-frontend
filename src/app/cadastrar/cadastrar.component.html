@@ -14,11 +14,12 @@
           <h3 class="text-center">
             Faça sua conta e seja um nó na rede Enlace
           </h3>
-          
+
           <div class="form-group iconDentro">
             <label for="nome">Nome:</label>
             <i class="fa fa-user-o" aria-hidden="true"></i>
             <input
+            [(ngModel)] = 'usuario.nome'
               type="text"
               class="form-control"
               name="nome"
@@ -29,7 +30,9 @@
           <div class="form-group iconDentro">
             <label for="nome">Email:</label>
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            <input type="email"
+            <input
+            [(ngModel)] = 'usuario.usuarioEmail'
+            type="email"
              class="form-control"
              name="email" id="email" />
           </div>
@@ -37,7 +40,9 @@
           <div class="form-group iconDentro">
             <label for="nome">Link da foto:</label>
             <i class="fa fa-picture-o" aria-hidden="true"></i>
-            <input type="text" class="form-control" name="foto" id="foto" />
+            <input
+            [(ngModel)] = "usuario.imagemUrl"
+            type="text" class="form-control" name="foto" id="foto" />
           </div>
 
           <div class="row">
@@ -46,6 +51,7 @@
                 <label for="senha" id="senhaLabel">Senha: </label>
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input
+                (input= confirmarSenha())
                   class="form-control"
                   type="password"
                   name="senha"
@@ -62,6 +68,7 @@
                 >
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input
+                [(ngModel)] = "usuario.senha"
                   class="form-control"
                   type="password"
                   name="confirmaSenha"
@@ -73,7 +80,7 @@
 
           <div class="form-group">
             <label for="tipo">Tipo de Usuário:</label>
-            <select class="form-control" name="tipo" id="tipo">
+            <select (change) = "selecionarTipoUsuario($event)" class="form-control" name="tipo" id="tipo">
               <option>Selecione um tipo de usuário</option>
               <option value="normal">Parceiro</option>
               <option value="adm">ONGs</option>
@@ -81,7 +88,7 @@
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btnEnv">Cadastrar</button>
+            <button (click) = "cadastrar()" type="submit" class="btnEnv">Cadastrar</button>
           </div>
         </div>
       </div>
