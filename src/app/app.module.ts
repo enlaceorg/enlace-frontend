@@ -10,6 +10,15 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BotaoAcoesComponent } from './botao-acoes/botao-acoes.component';
+import { PostagemComponent } from './postagem/postagem.component';
+import { PsotagemEditarComponent } from './psotagem-editar/psotagem-editar.component';
+import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
+import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
+import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
+import { TemaComponent } from './tema/tema.component';
+import { TemaEditarComponent } from './tema-editar/tema-editar.component';
+import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +26,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     CadastrarComponent,
     InicioComponent,
-    NavbarComponent
+    NavbarComponent,
+    BotaoAcoesComponent,
+    PostagemComponent,
+    PsotagemEditarComponent,
+    PostagemEditarComponent,
+    PostagemApagarComponent,
+    NavbarLogadoComponent,
+    TemaComponent,
+    TemaEditarComponent,
+    TemaApagarComponent
   ],
   imports: [
     BrowserModule,
