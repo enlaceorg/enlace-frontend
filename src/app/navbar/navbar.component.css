@@ -1,5 +1,4 @@
 * {
-
     margin: 0;
     padding: 0;
 }
@@ -23,10 +22,7 @@
 }
 
 
-ul.mx-auto {
 
-    margin-left: 100px !important;
-}
 
 .navbar-brand {
     position: relative;
@@ -52,7 +48,6 @@ a {
     font-size: 16pt;
     display: inline-block;
     position: relative;
-
 }
 
 .under-link::before {
@@ -63,13 +58,11 @@ a {
     width: 0;
     height: 2px;
     background-color: #f36c4a;
-    transition: width 0.10s ease-out;
-
+    transition: width 0.3s ease-out;
 }
 
 .under-link:hover::before {
     width: 100%;
-
 }
 
 .under-link:hover {
@@ -89,9 +82,8 @@ button {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    left: -5%;
-    margin-left: 15px !important;
-
+    margin-left: -35px;
+    margin-right: 50px !important;
 }
 
 button p {
