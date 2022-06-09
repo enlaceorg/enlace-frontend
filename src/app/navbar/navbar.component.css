@@ -4,28 +4,34 @@
     padding: 0;
 }
 
-nav {
-
+.navbar-nav {
     height: 70px;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
-.navbar-nav > li {
-  margin-left:5px;
-  margin-right:5px;
-  font-family: 'Epilogue', sans-serif;
-  font-size: 15pt;
+.navbar-nav li {
+    margin-top: 14px;
+    margin-left: 25px;
+    margin-right: 10px;
 }
+
+.p {
+    height: 70px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 15pt;
+}
+
 
 ul.mx-auto {
 
     margin-left: 100px !important;
 }
 
-.navbar-brand
-{
+.navbar-brand {
     position: relative;
-    background: url(https://i.imgur.com/mXefYi8.jpg);
-    width: 120px;
+    background: url(../../assets/logo.png);
+    width: 150px;
     height: 40px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,9 +41,44 @@ ul.mx-auto {
     display: block;
 }
 
+a {
+    cursor: pointer;
+}
+
+.under-link {
+    margin: 3px;
+    font-weight: bold;
+    color: #545454;
+    font-size: 16pt;
+    display: inline-block;
+    position: relative;
+
+}
+
+.under-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f36c4a;
+    transition: width 0.10s ease-out;
+
+}
+
+.under-link:hover::before {
+    width: 100%;
+
+}
+
+.under-link:hover {
+    color: #f36c4a;
+}
+
 button {
 
-    width: 180px;
+    width: 170px;
     height: 45px;
     border: 0;
     outline: none;
@@ -48,13 +89,18 @@ button {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    left: 5%;
-    margin-left: 10px !important;
+    left: -5%;
+    margin-left: 15px !important;
+
+}
+
+button p {
+    padding-top: 2%;
     font-size: 20pt;
+    font-family: 'Epilogue', sans-serif;
 }
 
-.active {
-
+button:hover {
     background: #545454;
-    transition: 1s;
 }
+
