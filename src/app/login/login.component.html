@@ -1,60 +1,57 @@
 <nav class="containerNav">
-  <a routerLink="/inicio"><img src="https://i.imgur.com/GDJkv6M.jpg" title="source: imgur.com" class="ml-5 mt-4" />
+  <a routerLink="/inicio"><img src="
+https://i.imgur.com/GDJkv6M.jpg
+
+" title="source: 
+imgur.com
+
+" class="ml-5 mt-4" />
     <p class="voltar">voltar</p>
   </a>
 </nav>
-<div class="container-fluid">
+<div class="container-fluid" id="principal">
   <div class="row">
-    <div class="col-md-6 d-flex justify-content-center" style="margin-top: 100px;">
-      <div>
-        <div style="text-align: center;">
-        <label style="margin-left: 250px; margin-top: 1px;">
-          <h1 class="h1n1"> Bem-<span style="color: #FFC732; ">Vinde</span></h1>
-        </label>
-        <label class="fonte" style="margin-left: 150px;">
-          <h2>Faça seu login para acessar o conteúdo da plataforma. </h2>
-        </label>
-        </div>
-        
-        <div class="form-group">
-          <div class="form-row iconDentro tamanho">
-            <div class="form-group col-md-10" style="margin-left: 120px; padding-right: 0;">
-              <label class="m-0" for="inputEmail4">E-mail:</label>
-              <input [(ngModel)]="usuarioLogin.usuarioEmail" type="email" class="form-control barraFundo" id="inputEmail4" />
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            </div>
-            </div>
+
+    <div class="col-md-6">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10" style="margin-top: 50px; margin-left: 50px;">
+          <h1 style="text-align: center;">Bem-<span style="color: #FFC732; ">Vinde</span></h1>
+          <h3 class="text-center">
+            Faça seu login para acessar o conteúdo da plataforma
+          </h3>
+
+          <div class="form-group iconDentro">
+            <label for="usuario">Usuário:</label>
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+            <input  [(ngModel)]="usuarioLogin.usuarioEmail" type="text" class="form-control" name="usuario" id="usuario" />
           </div>
-          
-          <div class="form-group col-md-10 iconDentro tamanho"
-            style="margin-left: 120px; padding-left: 0; padding-right: 0;">
-            <label class="m-0" for="inputPassword4">Senha:</label>
-            <input [(ngModel)]="usuarioLogin.senha" type="password" class="form-control barraFundo" id="inputPassword4">
-            <i class="fa fa-lock" style="top: 40px;" aria-hidden="true"></i>
 
 
-            <button (click)="entrar()" type="submit" class="btn btn-warning botaoRedondo mb-4 botao corBotao"
-              style="width: 100%;font-size: 25px;">Entrar</button>
-
-            <hr size="100" he width="100%">
-
+          <div class="form-group iconDentro">
+            <label for="senha">Senha:</label>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input [(ngModel)]="usuarioLogin.senha" type="password" class="form-control" name="senha" id="senha" />
+          </div>
+          <div class="d-flex justify-content-center">
+            <button (click)="entrar()" type="submit" class="btnEnv">Entrar</button>
+          </div>
+          <hr class="mt-4">
+          <div class="mt-4">
             <p style="text-align: center; margin-bottom: 5px; color: rgb(85, 85, 85);">
               Ainda não tem uma conta?
             </p>
-            <div style="text-align: center; margin-bottom: 160px;">
-              <a routerLink="/cadastrar">cadastre-se</a>
-            </div>
           </div>
-        
+          <div style="text-align: center; margin-bottom: 160px;">
+            <a routerLink="/cadastrar">cadastre-se</a>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <div class="col-md-6 p-0 nome">
-      <footer>
-        <img  src="https://i.imgur.com/g8nP2bL.gif" title="source: imgur.com" width="900px" />
-      </footer>
+    <div class="col-md-6 d-flex justify-content-end p-0">
+      <img style="height: 100%;" src="
+https://i.imgur.com/9T85cRl.gif
+" title="Desenhando porta" />
     </div>
   </div>
 </div>
-
-<div class="fundoB m-0"></div>
+<footer></footer> 
