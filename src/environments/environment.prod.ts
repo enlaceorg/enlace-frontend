@@ -1,3 +1,10 @@
 export const environment = {
-  production: true
+  production: true,
+  token: '',
+  usuarioId: 0,
+  nome: '',
+  usuarioEmail: '',
+  senha: '',
+  imagemUrl: '',
+  criadoEm: '',
 };
