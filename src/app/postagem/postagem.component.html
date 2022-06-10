@@ -1,1 +1,30 @@
-<p>postagem works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card mb-3">
+                <img class="card-img-top" src="{{postagem.imagem}}" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <div>
+                            <img src="{{usuario.imagemUrl}}">
+                            <p class="card-text">{{usuario.nome}}</p>
+                            <p>{{tema.tag}}</p>
+                        </div>
+                    </h5>
+                    <p class="card-text">{{postagem.conteudo}}</p>
+                    <p class="card-text"><small class="text-muted"><small class="text-muted">
+                                {{
+                                postagem.criadoEm
+                                | date: "dd/MM/yyyy" }} às
+                                {{
+                                postagem.criadoEm
+                                | date: "HH:mm" }}
+                            </small> </small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
