@@ -1,0 +1,22 @@
+.fs-54 {
+  font-size: 54px;
+}
+
+.btn-cadastrar{
+    background-color: #215DF2 ;
+    color: white;
+}
+
+.btn-cadastrar:hover{
+    background-color: white;
+    color:#215DF2;
+    
+}
+
+.botaoborda{
+    border-color: #215DF2;
+}
+
+.azulTema{
+    color:#215DF2;
+}

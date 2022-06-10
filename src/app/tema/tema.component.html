@@ -1,1 +1,76 @@
-<p>tema works!</p>
+
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center align-items-center mt-5">
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+      <h1 class="azulTema">Temas</h1>
+    </div>
+
+    <div class="col-md-4 pr-0 p-1 ">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Digite a descrição do tema"
+      />
+      
+    </div>
+
+    <div >
+      <button (click) = "cadastrar()" type="submit" class="btn btn-cadastrar botaoborda pt-1 pb-1" >Cadastrar</button>
+    </div> 
+
+    
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Modificações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tema of listasTemas">
+            <th >Helga</th>
+            <td>Mayara</td>
+            <td>
+              <button  class="btn btn-cadastrar botaoborda mr-3 " >Editar</button>
+              <button  class="btn btn-cadastrar botaoborda " data-target="#confirmaDeletar" >Apagar</button> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<!--Modal-->
+<div id="confirmaDeletar" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Texto do corpo do modal, é aqui.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>

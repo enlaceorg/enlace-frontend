@@ -12,7 +12,6 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BotaoAcoesComponent } from './botao-acoes/botao-acoes.component';
 import { PostagemComponent } from './postagem/postagem.component';
-import { PsotagemEditarComponent } from './psotagem-editar/psotagem-editar.component';
 import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
 import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
@@ -29,7 +28,6 @@ import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
     NavbarComponent,
     BotaoAcoesComponent,
     PostagemComponent,
-    PsotagemEditarComponent,
     PostagemEditarComponent,
     PostagemApagarComponent,
     NavbarLogadoComponent,
