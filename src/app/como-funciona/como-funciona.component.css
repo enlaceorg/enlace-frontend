@@ -1,0 +1,23 @@
+#texto-como-funciona {
+    margin:auto;
+    padding: auto;
+    font-family: 'Epilogue', sans-serif;
+    color: #545454;
+    text-align: center;
+    line-height: normal;
+}
+
+#gif-como-funciona {
+    background-image: url(https://i.imgur.com/M0EeIP4.png);
+    background-size: contain;
+    max-height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    margin: auto;
+}
+
+a {
+    color: #f36c4a;
+}

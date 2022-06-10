@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     CadastrarComponent,
     InicioComponent,
-    NavbarComponent
+    NavbarComponent,
+    SobreNosComponent,
+    ComoFuncionaComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,10 +33,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule
   ],
   providers: [
-    // {
-    //   provide: LocationStrategy,
-    //   useClass: HashLocationStrategy
-    // }
+    {
+       provide: LocationStrategy,
+       useClass: HashLocationStrategy
+    }
   ],
   bootstrap: [AppComponent]
 })
