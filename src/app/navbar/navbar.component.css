@@ -121,7 +121,7 @@ button p {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     #btnEntrar {
         margin-left: 60px;
     }
