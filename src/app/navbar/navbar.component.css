@@ -74,10 +74,9 @@ a {
     color: #f36c4a;
 }
 
-button {
-
-    width: 170px;
-    height: 45px;
+#btnEntrar, #btnCadastrar  {
+    width: 140px;
+    height: 40px;
     border: 0;
     outline: none;
     background: #F36C4A;
@@ -88,17 +87,42 @@ button {
     overflow: hidden;
     cursor: pointer;
     left: -5%;
-    margin-left: 15px !important;
+}
 
+button {
+    width: 70px;
+    height: 40px;
+    border: 0;
+    outline: none;
+    background: #F36C4A;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    left: -5%;
 }
 
 button p {
-    padding-top: 2%;
-    font-size: 20pt;
+    font-size: 13pt;
+    font-weight: bold;
     font-family: 'Epilogue', sans-serif;
 }
 
-button:hover {
+
+#btnEntrar:hover, #btnCadastrar:hover, button:hover {
     background: #545454;
 }
 
+
+#btnEntrar {
+    margin-left: inherit;
+}
+
+
+@media screen and (min-width: 800px) {
+    #btnEntrar {
+        margin-left: 60px;
+    }
+  }
