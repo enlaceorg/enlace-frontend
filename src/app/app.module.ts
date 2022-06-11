@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
 import { BotaoAcoesComponent } from './botao-acoes/botao-acoes.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
@@ -26,6 +27,7 @@ import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
     CadastrarComponent,
     InicioComponent,
     NavbarComponent,
+    MinhaspostagensComponent,
     BotaoAcoesComponent,
     PostagemComponent,
   
@@ -34,7 +36,7 @@ import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
     NavbarLogadoComponent,
     TemaComponent,
     TemaEditarComponent,
-    TemaApagarComponent
+    TemaApagarComponent,
   ],
   imports: [
     BrowserModule,
