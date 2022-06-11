@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { ContatoComponent } from './contato/contato.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
 import { BotaoAcoesComponent } from './botao-acoes/botao-acoes.component';
 import { PostagemComponent } from './postagem/postagem.component';
@@ -27,16 +31,19 @@ import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
     CadastrarComponent,
     InicioComponent,
     NavbarComponent,
+    SobreNosComponent,
+    ComoFuncionaComponent,
+    ContatoComponent,
+    LandingPageComponent,
     MinhaspostagensComponent,
     BotaoAcoesComponent,
     PostagemComponent,
-  
     PostagemEditarComponent,
     PostagemApagarComponent,
     NavbarLogadoComponent,
     TemaComponent,
     TemaEditarComponent,
-    TemaApagarComponent,
+    TemaApagarComponent
   ],
   imports: [
     BrowserModule,
@@ -46,10 +53,10 @@ import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
     FormsModule
   ],
   providers: [
-    // {
-    //   provide: LocationStrategy,
-    //   useClass: HashLocationStrategy
-    // }
+    {
+       provide: LocationStrategy,
+       useClass: HashLocationStrategy
+    }
   ],
   bootstrap: [AppComponent]
 })
