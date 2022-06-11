@@ -14,6 +14,15 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 import { ContatoComponent } from './contato/contato.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
+import { BotaoAcoesComponent } from './botao-acoes/botao-acoes.component';
+import { PostagemComponent } from './postagem/postagem.component';
+import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
+import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
+import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
+import { TemaComponent } from './tema/tema.component';
+import { TemaEditarComponent } from './tema-editar/tema-editar.component';
+import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +34,16 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     SobreNosComponent,
     ComoFuncionaComponent,
     ContatoComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    MinhaspostagensComponent,
+    BotaoAcoesComponent,
+    PostagemComponent,
+    PostagemEditarComponent,
+    PostagemApagarComponent,
+    NavbarLogadoComponent,
+    TemaComponent,
+    TemaEditarComponent,
+    TemaApagarComponent
   ],
   imports: [
     BrowserModule,

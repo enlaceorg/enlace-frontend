@@ -7,6 +7,7 @@ export class  Postagem {
   public abracei: number;
   public criadoEm: Date;
   public atualizadoEm: Date;
+  public imagem: string;
   public usuario: Usuario;
   public tema: Tema;
 }
