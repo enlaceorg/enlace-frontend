@@ -12,7 +12,7 @@ import { TemaService } from '../service/tema.service';
 export class TemaComponent implements OnInit {
 
   tema: Tema = new Tema()
-  listasTemas: Tema[]
+  listaTemas: Tema[]
   idTema: number
 
   constructor(
@@ -20,20 +20,21 @@ private router: Router,
 private temaService: TemaService,
 private route: ActivatedRoute
   ) { }
+  
 
   ngOnInit() {
     if (environment.token == ""){
       this.router.navigate(['/entrar'])
     }
     this.findAllTemas()
-    this.idTema = this.route.snapshot.params['id']
+    this.idTema = this.route.snapshot.params['temaId']
     this.findByIdTemas(this.idTema)
   }
 
-  cadastrar(){
-    this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
+  cadastrarTema(){
+ this.temaService.postTema(this.tema).subscribe((resp: Tema)=> {
       this.tema = resp
-      alert('Tema cadastrado com sucesso')
+      alert("Tema cadastrado com sucesso")
       this.findAllTemas()
       this.tema = new Tema()
     }) 
@@ -47,7 +48,7 @@ private route: ActivatedRoute
 
   findAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[] ) =>{
-      this.listasTemas = resp
+      this.listaTemas = resp
     })
   }
 

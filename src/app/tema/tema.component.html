@@ -1,76 +1,73 @@
 
-<div class="container-fluid">
-  <div class="row d-flex justify-content-center align-items-center mt-5">
-    <div class="col-md-3"></div>
-    <div class="col-md-2">
-      <h1 class="azulTema">Temas</h1>
+  <div class="container-fluid fundo">
+    <div class="row d-flex justify-content-center align-items-center  mt-5">
+      <div class="col-md-2">
+        <h1 class="azulTema d-flex justify-content-center">Temas</h1>
+      </div>
+
+      <div class="col-md-4 pr-0 p-0">
+        <input type="text" class="form-control " placeholder="Digite a descrição do tema" />
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-cadastrar botaoborda pt-1 ml-2" (click)="cadastrarTema()">Cadastrar</button>
+      </div>
+
+      <div class="container-fluid  mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8">
+            <table class="table table-hover text-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col" class="text-right" style="padding-right: 50px;">Modificações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="pt-3">1</th>
+                  <td class="pt-3">Mark</td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn btn-cadastrar botaoborda mr-3 ">Editar</button>
+                    <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar">Apagar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th>{{tema.temaId}}</th>
+                  <td>{{tema.descricao}}</td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn btn-cadastrar botaoborda mr-3 ">Editar</button>
+                    <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar">Apagar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="col-md-4 pr-0 p-1 ">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Digite a descrição do tema"
-      />
-      
-    </div>
-
-    <div >
-      <button (click) = "cadastrar()" type="submit" class="btn btn-cadastrar botaoborda pt-1 pb-1" >Cadastrar</button>
-    </div> 
-
-    
-    <div class="col-md-3"></div>
   </div>
-</div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2"></div>
 
-    <div class="col-md-8">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Modificações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let tema of listasTemas">
-            <th >Helga</th>
-            <td>Mayara</td>
-            <td>
-              <button  class="btn btn-cadastrar botaoborda mr-3 " >Editar</button>
-              <button  class="btn btn-cadastrar botaoborda " data-target="#confirmaDeletar" >Apagar</button> 
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="col-md-2"></div>
-  </div>
-</div>
-
-<!--Modal-->
-<div id="confirmaDeletar" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+<!--Modal Deletar-->
+<div id="confirmaDeletar" class="modal" tabindex="-1">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Título do modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+        <h5 class="modal-title">Deletar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Texto do corpo do modal, é aqui.</p>
+        <p>Todos as postagens relacionadas serão deletadas também, deseja continuar?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary" (click)="apagar()" data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>
 </div>
+<!--Modal Deletar-->

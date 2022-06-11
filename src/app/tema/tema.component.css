@@ -13,10 +13,30 @@
     
 }
 
+
+
 .botaoborda{
     border-color: #215DF2;
 }
 
+.btn-apagar{
+    background-color: #DC3545 ;
+    color: white;
+    border-color: #DC3545;
+}
+
+.btn-apagar:hover{
+    background-color: white;
+    color:#DC3545;
+    
+}
 .azulTema{
     color:#215DF2;
 }
+.fundo{
+  background-image: url(
+https://i.imgur.com/D234Kz6.jpg
+);  
+  background-repeat: no-repeat;
+  background-size: 100%;
+} 
