@@ -15,10 +15,10 @@
     margin-right: 10px;
 }
 
-.p {
-    height: 70px;
+.under-link {
     font-family: 'Epilogue', sans-serif;
     font-size: 15pt;
+    font-weight: 400 !important;
 }
 
 
@@ -75,6 +75,7 @@ a {
 }
 
 #btnEntrar, #btnCadastrar  {
+    padding: 9px 8px;
     width: 140px;
     height: 40px;
     border: 0;
