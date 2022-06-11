@@ -1,159 +1,148 @@
-.footer{
-    right: 0;
-    bottom: 0;
-    min-width: 120px;
-    display: flex;
-    justify-content: right;    
-}
-
-hr{
-    color: black;
-    border: none;
-    height: 2px;
-    background: rgb(128, 128, 128);
+#principal {
+    color: #545454;
+    background-color: #fdfefd;
     font-family: 'Epilogue', sans-serif;
-}
+    font-weight: 300;
+    font-family: 23px;
+  }
+  
+  .containerNav img {
+    width: 50px;
+    height: 50px;
+  }
 
-.fonte{
-    font-family: "Epilogue";
-}
+  footer{
+      padding: 5px;
+      color: #FFC732;
+  }
 
-.botao{
-    margin-top: 30px; 
-    padding: 10px; 
-    background-color: #d1d1d1; 
-    color:rgb(94, 94, 94); 
-    border: 0;
-}
+  nav {
+    background-color: #fdfefd;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 0%;
+    
+  }
 
-.tamanho{
-    font-size: 30px;
-}
+  a{
+   text-decoration: none;
+  }
 
-input{
-    border: 0;
-}
+  .voltar {
+    color: #FFC732;
+    margin-left: 55px;
+    padding-top: 0px;
+  }
+  nav img {
+    width: 50px;
+    height: 50px;
+    
+  }
+  
+  h3 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+  }
+  
+  p {
+    margin: 0px;
+  }
+  
+  .quadradoCadastra {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+  }
 
+  
+  span {
+    color: #FFC732;
+  }
+  
+  .form-group{
+    justify-content: center;
+  }
+  
+  
+  input,select {
+    background-color: #f4f4f4;
+    border: none;
+  }
+  
+  label {
+    margin: 0%
+  }
+  
+  
+  .btnEnv {
+    background-color: #CCCBCC;
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    transition: all .3s;
+    font-size: 23px;
+    color: #545454;
+  }
+  
+  .btnEnv:hover {
+    background-color: #FFC732;
+    color: #fdfefd
+  
+  }
+  
+  #imgLateral {
 
-.corBotao:hover{
-    background-color:#FFC732;
-}
-
-h2{
-    background-color: white;
-    height: 100px;
-    width: 700px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 200;
-    margin-top: 30px;
-    margin-bottom: 50px;
-   
-}
-
-.h1n1{
-    font-size: 100px;
-    height: 100px;
-    width: 600px;
-}
-
-.corona{
-    font-size: 22px;
-    height: 100px;
-    width: 600px;
-}
-
-.iconDentro input{
+    display: flex;
+    justify-content: end;
+    
+    
+    padding-bottom: 30px;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #FFC732
+  }
+  
+  
+  @media screen and (max-width: 760px){
+    .cadastra {
+      transform: rotate(270deg);
+      font-size: 50px;
+      width: 100px;
+      
+    }
+  
+    .quadradoCadastra {
+  
+      align-items: center;
+      writing-mode: vertical-rl;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    align-items: center;
+    justify-content:flex-start;
+  
+    
+    }
+  }
+  
+  .iconDentro input{
     padding-left: 40px;
-}
-
-.iconDentro{
+  }
+  
+  .iconDentro{
     position: relative;
-}
-
-.iconDentro i{
+  }
+  
+  .iconDentro i{
     position: absolute;
     left: 6px;
-    top: 39px;
+    top: 25px;
     padding: 9px 8px;
     color: #FFC732;
-}
-
-.fundoB{
-    border: 0;
-    background-color: #FFC732;
-    padding-top: 90px;
-    padding-right: 1%;
-    padding-bottom: 0px;
-    padding-left: 1px;
-    width: 100%;
-}
-
-.barraFundo{
-    background-color: #f4f4f4;
-}
-       
-.botaoRedondo{
-    border-radius: 30px;
-}
-
-a{
-    text-decoration: none;
-}
-
-.containerNav img {
-    width: 50px;
-    height: 50px;
-  }  
-
-  .voltar {
-    margin-left: 55px;
-    padding-top: 0px;
-    color: #FFC732;
   } 
-
-  .nome{
-      display: flex;
-      justify-content: end;
-      align-content: flex-end;
-  }
-
-/*responsividade*/
-
-@media screen and (max-width: 1440px){
-    section{
-        width: 1072px;
-    }
-}
-@media screen and (max-width: 1200px){
-    section{
-        width: 1000px;
-    }
-}
-@media screen and (max-width: 1024px){
-    section{
-        width: 700px;
-    }
-}
-@media screen and (max-width: 768px){
-    section{
-        width: 400px;
-    }
-}
-@media screen and (max-width: 425px){
-    section{
-        width: 320px;
-    }
-}
-
-.containerNav img {
-    width: 50px;
-    height: 50px;
-  }  
-
-  .voltar {
-    margin-left: 55px;
-    padding-top: 0px;
-  }
-
-/*responsividade*/
