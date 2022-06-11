@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 import { ContatoComponent } from './contato/contato.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContatoComponent } from './contato/contato.component';
     NavbarComponent,
     SobreNosComponent,
     ComoFuncionaComponent,
-    ContatoComponent
+    ContatoComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
