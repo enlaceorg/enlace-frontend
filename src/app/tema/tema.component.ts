@@ -31,6 +31,18 @@ private route: ActivatedRoute
     this.findByIdTemas(this.idTema)
   }
 
+  findAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[] ) =>{
+      this.listaTemas = resp
+    })
+  }
+
+  findByIdTemas(id: number){
+    this.temaService.getByIdTema(id).subscribe((resp: Tema) =>{
+      this.tema = resp
+    })
+  }
+
   cadastrarTema(){
  this.temaService.postTema(this.tema).subscribe((resp: Tema)=> {
       this.tema = resp
@@ -46,17 +58,13 @@ private route: ActivatedRoute
     })
   }
 
-  findAllTemas(){
-    this.temaService.getAllTema().subscribe((resp: Tema[] ) =>{
-      this.listaTemas = resp
-    })
-  }
-
-  findByIdTemas(id: number){
-    this.temaService.getByIdTema(id).subscribe((resp: Tema) =>{
+  editar(){
+    this.temaService.putTema(this.tema).subscribe((resp: Tema)=>{
       this.tema = resp
+      alert('Tema atualizado com sucesso')
     })
-
   }
+
+ 
 
 }

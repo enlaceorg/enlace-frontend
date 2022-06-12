@@ -29,7 +29,7 @@
                   <th>{{tema.temaId}}</th>
                   <td>{{tema.descricao}}</td>
                   <td class="d-flex justify-content-end">
-                    <button class="btn btn-cadastrar botaoborda mr-3 ">Editar</button>
+                    <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#confirmaEditar">Editar</button>
                     <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar">Apagar</button>
                   </td>
                 </tr>
@@ -63,3 +63,26 @@
   </div>
 </div>
 <!--Modal Deletar-->
+
+
+<!--Modal Editar-->
+<div id="confirmaEditar" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Você tem certeza que deseja editar o tema {{tema.descricao}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary" (click)="editar()" data-dismiss="modal">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Modal Atualizar-->
