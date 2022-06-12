@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       environment.imagemUrl = this.usuarioLogin.imagemUrl
       environment.token = this.usuarioLogin.token
 
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/postagem'])
     }, err =>{
       if(err.status == 500 || err.status == 401) {
         alert("Usuário não encontrado ou senha incorreta")
