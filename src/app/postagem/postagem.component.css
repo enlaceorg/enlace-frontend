@@ -3,10 +3,31 @@
 }
 
 .logo-lateral {
-  width: 100%;
-  height: 42.23em;
-  background-color: gray;
-  align-items: center;
-
+  opacity: .8;
+  position: fixed;
+  z-index: 99;
+  top:140px;
+  right:  -16px;
 
 }
+
+.margin-0{
+  margin: 0;
+}
+
+.bg-fundo{
+  background-color: #dddddd;
+}
+
+.fz-15 {
+  font-size: 15px;
+  margin: 0;
+}
+
+
+@media screen and (max-width:760px) {
+  .imagem-lateral{
+      width: auto;
+  }
+}
+

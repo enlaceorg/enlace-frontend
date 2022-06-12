@@ -1,41 +1,72 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="barra-lateral">
-        </div>
-      </div>
-
-        <div class="col-md-6">
-
-            <div class="card mb-3">
-                <img class="card-img-top" src="{{postagem.imagem}}" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <div>
-                            <img src="{{usuario.imagemUrl}}">
-                            <p class="card-text">{{usuario.nome}}</p>
-                            <p>{{tema.tag}}</p>
-                        </div>
-                    </h5>
-                    <p class="card-text">{{postagem.conteudo}}</p>
-                    <p class="card-text"><small class="text-muted"><small class="text-muted">
-                                {{
-                                postagem.criadoEm
-                                | date: "dd/MM/yyyy" }} às
-                                {{
-                                postagem.criadoEm
-                                | date: "HH:mm" }}
-                            </small> </small></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 logo-lateral d-flex ">
-          <img class="img-fluid"   width="500em" height="250em" alt="">
-        </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="barra-lateral"></div>
     </div>
 
-</div>
+    <!-- <div class="col-md-6">
+      <div class="card mb-3">
+        <img class="card-img-top" src="{{ postagem.imagem }}" alt="Imagem de capa do card" />
+        <div class="card-body">
+          <h5 class="card-title">
+            <div>
+              <img src="{{ usuario.imagemUrl }}" />
+              <p class="card-text">{{ usuario.nome }}</p>
+              <p>{{ tema.tag }}</p>
+            </div>
+          </h5>
+          <p class="card-text">{{ postagem.conteudo }}</p>
+          <p class="card-text">
+            <small class="text-muted"><small class="text-muted">
+                {{ postagem.criadoEm | date: "dd/MM/yyyy" }} às
+                {{ postagem.criadoEm | date: "HH:mm" }}
+              </small>
+            </small>
+          </p>
+        </div>
+      </div> -->
 
-<h1>Postagem
-</h1>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <img class="card-img-top" src="https://i.imgur.com/S50vxAo.jpg" alt="Imagem de capa do card" />
+        <div class="card-body bg-fundo">
+          <h5 class="card-title">
+            <div class="d-flex align-items-center justify-content-start">
+              <div>
+                <img class="rounded-circle" width="50px" height="50px" src="https://i.imgur.com/g6ei7uI.jpg" />
+              </div>
+              <div class="ml-1">
+                <p class="card-text margin-0">Gustavo</p>
+                <p class="fz-15">Tema: pinga</p>
+              </div>
+
+            </div>
+          </h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum rem, iste ex totam
+            explicabo praesentium, iusto repellat laborum atque quisquam perspiciatis? Ratione, officia iure incidunt
+            dolorem accusantium et aliquid?</p>
+
+        </div>
+        <div class="">
+        <div class="d-flex justify-content-between">
+          <div>
+            <p class="card-text">
+              <small class="text-muted"><small>
+                  14|06
+                </small>
+              </small>
+            </p>
+          </div>
+          <div>
+            <i class="fa-thin fa-hand-holding-heart fz-15"></i>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 logo-lateral d-flex justify-content-end">
+      <img class="img-fluid imagem-lateral" src="https://i.imgur.com/gSTt4CE.png" width="500em" height="250em" alt="" />
+    </div>
+  </div>
+</div>
