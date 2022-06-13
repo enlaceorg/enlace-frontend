@@ -1,5 +1,4 @@
 * {
-
     margin: 0;
     padding: 0;
 }
@@ -16,15 +15,14 @@
     margin-right: 10px;
 }
 
-.p {
-    height: 70px;
+.under-link {
     font-family: 'Epilogue', sans-serif;
     font-size: 15pt;
+    font-weight: 400 !important;
 }
 
 
 ul.mx-auto {
-
     margin-left: 100px !important;
 }
 
@@ -76,10 +74,10 @@ a {
     color: #f36c4a;
 }
 
-button {
-
-    width: 170px;
-    height: 45px;
+#btnEntrar, #btnCadastrar  {
+    padding: 9px 8px;
+    width: 140px;
+    height: 40px;
     border: 0;
     outline: none;
     background: #F36C4A;
@@ -90,17 +88,42 @@ button {
     overflow: hidden;
     cursor: pointer;
     left: -5%;
-    margin-left: 15px !important;
+}
 
+button {
+    width: 70px;
+    height: 40px;
+    border: 0;
+    outline: none;
+    background: #F36C4A;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    left: -5%;
 }
 
 button p {
-    padding-top: 2%;
-    font-size: 20pt;
+    font-size: 13pt;
+    font-weight: bold;
     font-family: 'Epilogue', sans-serif;
 }
 
-button:hover {
+
+#btnEntrar:hover, #btnCadastrar:hover, button:hover {
     background: #545454;
 }
 
+
+#btnEntrar {
+    margin-left: inherit;
+}
+
+
+@media screen and (min-width: 1000px) {
+    #btnEntrar {
+        margin-left: 60px;
+    }
+  }

@@ -16,8 +16,8 @@ token = {
   headers: new HttpHeaders().set('Authorization', environment.token)
 }
 
-getAllPostagens(): Observable<Postagem>{
-  return this.http.get<Postagem>('https://enlaceorg.herokuapp.com/psotagens', this.token);
+getAllPostagens(): Observable<Postagem[]>{
+  return this.http.get<Postagem[]>('https://enlaceorg.herokuapp.com/postagens', this.token);
 }
 
 postPostagem(postagem: Postagem):Observable<Postagem>{

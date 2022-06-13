@@ -1,10 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+#sobre-nos {
+    background-color: #f36c4a;
 }
 
-.container-fluid {
-    height: 100vh;
+
+#contato {
+    background-color: #4a77f3;
 }
 
 h1 {
@@ -12,11 +12,6 @@ h1 {
     font-family: 'Epilogue', sans-serif;
     color: #545454;
     font-weight: bolder;
-    text-align: center;
-    line-height: normal;
-    margin-top: 10%;
-    margin-left: 6%;
-    margin-right: 1%;
 }
 
 
@@ -31,6 +26,7 @@ span {
 #lado-esquerdo {
     background-image: url(https://i.imgur.com/SoZrNSR.gif);
     background-size: contain;
+    max-height: 500px;
     background-repeat: no-repeat;
     background-position: center;
     height: 90vh;
@@ -42,5 +38,6 @@ span {
     background-repeat: no-repeat;
     background-position-x: -15%;
     background-position-y: 150%;
-    background-size: 40%;
+    background-size: 40% ;
+    height: 100vh;
 }
