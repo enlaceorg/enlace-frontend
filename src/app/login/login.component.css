@@ -94,11 +94,13 @@ label {
     transition: all .3s;
     font-size: 23px;
     color: #545454;
+    outline: none;
 }
 
 .btnEnv:hover {
     background-color: #FFC732;
-    color: #fdfefd
+    color: #fdfefd;
+    border: none;
 }
 
 .iconDentro input {
