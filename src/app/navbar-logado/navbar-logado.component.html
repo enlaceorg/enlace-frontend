@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0  mr-auto d-flex align-items-center">
+            <li class="nav-item">
+                <a href="#inicio">
+                    <p class="under-link">início</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#sobre-nos">
+                    <p class="under-link">minhas postagens</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#como-funciona">
+                    <p class="under-link">encontre ongs</p>
+                </a>
+            </li>
+        </ul>
+
+        <div class="navbar-nav mx-auto">
+            <li id="foto" class="nav-item ml-5 mr-0">
+                <img src="{{foto}}" alt="User image profile" width="50px" height="50px" class="rounded-circle">
+            </li>
+
+            <li id="usuario-sair" class="nav-item dropdown mr-0 dz-flex">
+                <p class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-toggle="dropdown" aria-expanded="false">
+                    {{nome}}
+                </p>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a>
+                        <button (click)="sair()" id="btn-sair" class="nav-item">
+                            Sair
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+            </li>
+        </div>
+    </div>
+</nav>

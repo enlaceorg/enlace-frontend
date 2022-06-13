@@ -3,6 +3,8 @@
   background-color: #fdfefd;
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
+  font-family: 23px;
+
 }
 
 .containerNav img {
@@ -23,6 +25,7 @@ nav {
 .voltar {
   margin-left: 10px;
   padding-top: 0px;
+
 }
 nav img {
   width: 50px;
@@ -32,7 +35,7 @@ nav img {
 
 h3 {
   font-family: 'Epilogue', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 29px;
 }
 
