@@ -54,8 +54,8 @@ import { TemaApagarComponent } from './tema-apagar/tema-apagar.component';
   ],
   providers: [
     {
-       provide: LocationStrategy,
-       useClass: HashLocationStrategy
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
     }
   ],
   bootstrap: [AppComponent]
