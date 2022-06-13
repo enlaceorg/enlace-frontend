@@ -6,7 +6,9 @@
       </div>
 
       <div class="col-md-4 pr-0 p-0">
-        <input type="text" class="form-control " placeholder="Digite a descrição do tema" />
+        <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a tag do tema" />
+
+        <input [(ngModel)]="tema.tag" type="text" class="form-control " placeholder="Digite a tag do tema" />
       </div>
 
       <div>
@@ -25,8 +27,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>{{tema.temaId}}</th>
+                <tr *ngFor='let tema of listaTemas'>
+                  <th>{{tema.tag}}</th>
                   <td>{{tema.descricao}}</td>
                   <td class="d-flex justify-content-end">
                     <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#confirmaEditar">Editar</button>

@@ -6,17 +6,19 @@ import { InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PostagemComponent } from './postagem/postagem.component';
+import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
 
 
 const routes: Routes = [
 
   {path:"", redirectTo:"inicio", pathMatch:"full"},
-  {path:"inicio", component: InicioComponent},
   {path:"entrar", component: LoginComponent},
   {path:"cadastrar", component: CadastrarComponent},
   {path:"postagem", component:PostagemComponent },
   {path: "tema", component: TemaComponent},
-  {path:"inicio", component: LandingPageComponent}
+  {path:"inicio", component: LandingPageComponent},
+  {path:"minhaspostagens", component: MinhaspostagensComponent}
+
 ];
 
 @NgModule({

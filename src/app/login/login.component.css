@@ -201,6 +201,11 @@ span {
     color: #FFC732;
 }
 
+label {
+  font-weight: 400;
+  margin: 0%;
+}
+
 .form-group {
     justify-content: center;
 }

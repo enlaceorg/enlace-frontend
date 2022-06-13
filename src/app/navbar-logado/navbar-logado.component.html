@@ -8,19 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0  mr-auto d-flex align-items-center">
             <li class="nav-item">
-                <a href="#inicio">
+                <a href="#" routerLink="/postagem">
                     <p class="under-link">início</p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#sobre-nos">
+                <a routerLink="/minhaspostagens">
                     <p class="under-link">minhas postagens</p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#como-funciona">
+                <a href="#">
                     <p class="under-link">encontre ongs</p>
                 </a>
             </li>
@@ -28,11 +28,11 @@
 
         <div class="navbar-nav mx-auto">
             <li id="foto" class="nav-item ml-5 mr-0">
-                <img src="{{foto}}" alt="User image profile" width="50px" height="50px" class="rounded-circle">
+                <img src="{{foto}}" alt="Imagem de perfil" width="50px" height="50px" class="rounded-circle">
             </li>
 
             <li id="usuario-sair" class="nav-item dropdown mr-0 dz-flex">
-                <p class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                <p class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button"
                     data-toggle="dropdown" aria-expanded="false">
                     {{nome}}
                 </p>
