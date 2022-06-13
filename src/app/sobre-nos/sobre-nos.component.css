@@ -38,6 +38,8 @@ p{
     align-items: center;
 }
 
+
+
 figure, figure img{
     width: 130px;
     height: 130px;
@@ -55,23 +57,22 @@ figure, figure img{
 #fig2{
     background-image: url(https://i.imgur.com/kHquEe9.png);
     margin-left: 36px;
-
+    
 }
 
 #fig2:hover{
     background-image: url(https://i.imgur.com/M164zyD.png);
+    transition:all 0.2s;
 }
 
 #fig3{
     background-image: url(https://i.imgur.com/pFredDZ.png);
     margin-left: 90px;
+    
 }
 
 #fig3:hover{
     background-image: url(https://i.imgur.com/pXYv3bz.png);
+    transition:all 0.1s;
 }
 
-.figure{
-    display: flex;
-    justify-content: center;
-}
