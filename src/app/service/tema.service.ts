@@ -28,7 +28,7 @@ export class TemaService {
   }
 
   putTema(tema:Tema):Observable<Tema>{
-    return this.http.put<Tema>('https://enlaceorg.herokuapp.com/tema', tema, this.token);
+    return this.http.put<Tema>('https://enlaceorg.herokuapp.com/temas', tema, this.token);
   }
 
   deleteTema(id: number){
