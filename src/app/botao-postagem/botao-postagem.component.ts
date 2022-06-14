@@ -24,11 +24,11 @@ export class BotaoPostagemComponent implements OnInit {
   idUsuario = environment.usuarioId
 
   tema: Tema = new Tema()
-  listaTemas: Tema[]
+  listaTema: Tema[]
   idTema: number
 
   postagem: Postagem = new Postagem()
-  listaPostagens: Postagem[]
+  listaPostagem: Postagem[]
 
 
 
@@ -39,16 +39,14 @@ export class BotaoPostagemComponent implements OnInit {
     private authService: AuthService) { }
 
   ngOnInit() {
-    this.opacidade()
-
     if (environment.token == '') {
       // alert('Sua seção expirou, faça o login novamente');
       this.router.navigate(['/entrar']);
     }
+    this.authService.refreshToken();
+    this.getAllTemas();
+    this.opacidade();
 
-    this.authService.refreshToken()
-    this.getAllPostagens
-    this.getAllTemas
   }
 
   opacidade() {
@@ -83,51 +81,51 @@ export class BotaoPostagemComponent implements OnInit {
   getAllTemas() {
     this.temaService.getAllTema().subscribe({
       next: (resp: Tema[]) => {
-        this.listaTemas = resp
+        this.listaTema = resp
       }
     })
   }
 
-  findByIdTema(){
+  findByIdTema() {
     this.temaService.getByIdTema(this.idTema).subscribe({
-      next: (resp:Tema) => {
+      next: (resp: Tema) => {
         this.tema = resp
       },
     })
   }
 
-
-  getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe({
-      next: (resp: Postagem[]) => {
-        this.listaPostagens = resp
-      },
-    })
-  }
-
-  findByIdUser(){
+  findByIdUser() {
     this.authService.getByIdUsuario(this.idUsuario).subscribe({
-      next: (resp: Usuario) =>{
+      next: (resp: Usuario) => {
         this.usuario = resp
       }
     })
   }
 
-  publicar(){
-   this.tema.temaId = this.idTema
-   this.postagem.tema = this.tema
+  // CRUD
+  getAllPostagem(){
+    this.postagemService.getAllPostagens().subscribe({
+      next: (resp: Postagem[]) => {
+        this.listaPostagem = resp
+      },
+    })
+  }
 
-   this.usuario.usuarioId = this.idUsuario
-   this.postagem.usuario = this.usuario
+  publicar() {
+    this.tema.temaId = this.idTema
+    this.postagem.tema = this.tema
 
-   this.postagemService.postPostagem(this.postagem).subscribe({
-    next: (resp: Postagem)=>{
-      this.postagem = resp
-      console.log(this.postagem)
-      alert('Publicação realizada com sucesso!')
-      this.postagem = new Postagem()
-    }
-   })
+    this.usuario.usuarioId = this.idUsuario
+    this.postagem.usuario = this.usuario
+
+    this.postagemService.postPostagem(this.postagem).subscribe({
+      next: (resp: Postagem) => {
+        this.postagem = resp
+        alert('Publicação realizada com sucesso!')
+        this.postagem = new Postagem()
+        this.getAllPostagem()
+      }
+    })
   }
 
 
