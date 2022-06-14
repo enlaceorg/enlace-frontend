@@ -1,0 +1,28 @@
+.corpocard{
+    background-color: rgb(195, 195, 195);
+    
+}
+
+.fonteencontre{
+    font-size: 100px;
+    margin-top: 40px;
+}
+
+.corong{
+    color: #545454;
+}
+
+.tamanhobarra{
+    width: 400px;
+}
+
+
+i{
+    color: white;
+}
+
+.botaopesq:hover{
+    background-color:#545454;
+    color: #fdfefd;  
+    border-color: #545454; 
+}

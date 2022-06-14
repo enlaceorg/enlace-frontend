@@ -44,7 +44,7 @@ import { FooterComponent } from './footer/footer.component';
     PostagemApagarComponent,
     NavbarLogadoComponent,
     TemaComponent,
-    EncontreOngsComponent
+    EncontreOngsComponent,
     FooterComponent
   ],
   imports: [
