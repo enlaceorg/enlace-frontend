@@ -10,7 +10,6 @@ import { environment } from '../../environments/environment.prod';
 })
 export class AuthService {
 
-
   constructor(
     public http: HttpClient
   ) { }
@@ -35,6 +34,10 @@ export class AuthService {
 
   getByIdUsuario(id: number):Observable<Usuario>{
     return this.http.get<Usuario>(`https://enlaceorg.herokuapp.com/usuarios/cadastro/${id}`, this.token)
+  }
+
+  getTodosUsuarios(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>('https://enlaceorg.herokuapp.com/usuarios', this.token);
   }
 
   logado(){
