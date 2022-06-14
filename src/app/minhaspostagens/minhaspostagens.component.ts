@@ -18,25 +18,22 @@ export class MinhaspostagensComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.usuarioId
   tema: Tema = new Tema()
-  listaTema: Tema[]
+  listaTemas: Tema[]
   idTema: number
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
   idPost: number
-  postagemSelecionada: number
-  post: Postagem = new Postagem()
+  postagemSelecionada: Postagem = new Postagem()  
 
   constructor(
-  public router: Router, 
-  public route: ActivatedRoute,
-  private postagemService: PostagemService, 
-  private temaService: TemaService, 
-  private authService: AuthService) 
-
-  { }
+    public router: Router,
+    public route: ActivatedRoute,
+    private postagemService: PostagemService,
+    private temaService: TemaService,
+    private authService: AuthService) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     if (environment.token == '') {
       // alert('Sua seção expirou, faça o login novamente');
       this.router.navigate(['/entrar']);
@@ -51,7 +48,7 @@ export class MinhaspostagensComponent implements OnInit {
 
   getAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
-      this.listaTema = resp
+      this.listaTemas = resp
     })
   }
 
@@ -73,27 +70,27 @@ export class MinhaspostagensComponent implements OnInit {
     })
   }
 
-  editar(){
-    this.tema.temaId=this.idTema
-    this.postagem.tema=this.tema
-    this.usuario.usuarioId=this.idUsuario
-    this.postagem.usuario=this.usuario
+  editar() {
+    this.tema.temaId = this.idTema
+    this.postagem.tema = this.tema
+    this.usuario.usuarioId = this.idUsuario
+    this.postagem.usuario = this.usuario
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem)=>{
-      this.postagem=resp
-      alert("Postagem realizada com sucesso!") 
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert("Postagem realizada com sucesso!")
       this.postagem = new Postagem()
     })
   }
 
-  findByIdPostagem(id: number){
+  findByIdPostagem(id: number) {
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
 
-  apagarSelecionada(){
-    this.postagemService.deletePostagem(this.postagemSelecionada).subscribe(()=>{
+  apagarSelecionada() {
+    this.postagemService.deletePostagem(this.postagemSelecionada.postagemId).subscribe(() => {
       alert('Postagem apagada com sucesso!')
       this.idPost = this.route.snapshot.params['id']
       this.findByIdPostagem(this.idPost)
@@ -101,11 +98,22 @@ export class MinhaspostagensComponent implements OnInit {
       this.getAllTemas();
       this.findByIdUsuario();
       this.router.navigate(['/minhaspostagens'])
-  })
-}
+    })
+  }
 
-  selecionarPostagem(id:number){
-    this.postagemSelecionada=id
+  selecionarPostagem(postagem: Postagem) {
+    this.postagemSelecionada.postagemId=postagem.postagemId
+    this.postagemSelecionada.imagem=postagem.imagem
+    this.postagem.conteudo = postagem.conteudo
+    this.postagem.tema = postagem.tema
+  }
+
+  atualizarSelecionada() {
+    this.postagemService.putPostagem(this.postagemSelecionada).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem atualizada com sucesso!')
+      this.router.navigate(['/minhaspostagens'])
+    })
   }
 
 
