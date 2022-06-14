@@ -13,97 +13,75 @@
     background-color:#545454;
     color: #fdfefd;
   }
+
+  .btn-danger{
+    background-color:  #f16a4a;
+    border: none;
+    margin-right: 8px;
+
+  }
+
+  .btn-danger:hover{
+    background-color:#545454;
+    color: #fdfefd;
+    border: none;
+
+  }
+
+  .btn-success{
+    background-color:  #215df2;
+    color: #fdfefd;
+    border: none;
+  }
+
+  .btn-success:hover{
+    background-color:#545454;
+    color: #fdfefd;
+    border: none;
+  }
+
+  .btn-secondary{
+    background-color:  #f16a4a;
+    border: none;
+    margin-right: 8px;
+  }
+
+  .btn-secondary:hover{
+    background-color:#545454;
+    color: #fdfefd;
+  }
+
+
+  .btn-primary{
+    background-color:  #215df2;
+    color: #fdfefd;
+    border: none;
+  }
+
+  .btn-primary:hover{
+    background-color:#545454;
+    color: #fdfefd;
+  }
   
 .iconDentro input{
     padding-left: 40px;
   }
   
-  .iconDentro{
+.iconDentro{
     position: relative;
   }
   
-  .iconDentro i{
+.iconDentro i{
     position: absolute;
     left: 7px;
     top: 3px;
     padding: 9px 8px;
     color: white;
     font-size: 25px;
-  }
+}
 
-  body{
+body{
       background-image: url(https://i.imgur.com/D234Kz6.jpg);  
       background-repeat: no-repeat;
       background-size: 100%;
-    }
-
-    /* botão*/
-
-    .botaoCanc{
-      border: none;
-      margin: 5px;
-      background-color:  #f16a4a;
-      padding: 10px;
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      outline: none;
-  }
-  
-  .botaoCanc:hover {
-      background-color:#545454;
-      color: #fdfefd;
-    }
-  
-    .botaoEntrar{
-      border: none;
-      margin: 5px;
-      background-color:  #215df2;
-      padding: 10px;
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      outline: none;
-  }
-  
-  .botaoEntrar:hover {
-      background-color:#545454;
-      color: #fdfefd;
-    }
-  
-    .iconDentro{
-   font-size: 40px;
-    }
-    
-    .iconDentro input{
-      padding-left: 40px;
-    }
-    
-    .iconDentro{
-      position: relative;
-    }
-    
-    .iconDentro i{
-      position: absolute;
-      left: 0px;
-      top: -4px;
-      padding: 9px 8px;
-      color: white;
-    }
-  
-    .fs {
-      margin-bottom: 0px;
-      color: #545454;
-      font-family: 'Epilogue', sans-serif;
-      font-weight: ExtraLight 200;
-      font-family: 23px;
-    }
-  
-    label{
-      margin-bottom: 0px;
-    }
-  
-    h1{
-      margin-bottom: 15px;
-    }
-
+}

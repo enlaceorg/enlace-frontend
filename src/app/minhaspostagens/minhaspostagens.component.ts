@@ -104,17 +104,25 @@ export class MinhaspostagensComponent implements OnInit {
   selecionarPostagem(postagem: Postagem) {
     this.postagemSelecionada.postagemId=postagem.postagemId
     this.postagemSelecionada.imagem=postagem.imagem
-    this.postagem.conteudo = postagem.conteudo
-    this.postagem.tema = postagem.tema
+    this.postagemSelecionada.conteudo = postagem.conteudo
+    this.postagemSelecionada.tema = postagem.tema
+    this.postagemSelecionada.usuario = postagem.usuario
   }
 
   atualizarSelecionada() {
+    this.tema.temaId = this.idTema
     this.postagemService.putPostagem(this.postagemSelecionada).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem atualizada com sucesso!')
+      this.findByIdPostagem(this.idPost)
+      this.getAllPostagem();
+      this.getAllTemas();
+      this.findByIdUsuario();
       this.router.navigate(['/minhaspostagens'])
     })
   }
+
+
 
 
 }
