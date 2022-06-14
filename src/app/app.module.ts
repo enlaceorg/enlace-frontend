@@ -22,6 +22,8 @@ import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.compo
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -43,6 +45,7 @@ import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
     NavbarLogadoComponent,
     TemaComponent,
     EncontreOngsComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

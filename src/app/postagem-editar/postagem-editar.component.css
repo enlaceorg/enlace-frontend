@@ -1,0 +1,67 @@
+.botaoCanc{
+    border: none;
+    margin: 5px;
+    background-color:  #f16a4a;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.botaoCanc:hover {
+    background-color:#545454;
+    color: #fdfefd;
+  }
+
+  .botaoEntrar{
+    border: none;
+    margin: 5px;
+    background-color:  #215df2;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.botaoEntrar:hover {
+    background-color:#545454;
+    color: #fdfefd;
+  }
+
+  .iconDentro{
+ font-size: 40px;
+  }
+  
+  .iconDentro input{
+    padding-left: 40px;
+  }
+  
+  .iconDentro{
+    position: relative;
+  }
+  
+  .iconDentro i{
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    padding: 9px 8px;
+    color: white;
+  }
+
+  .fs {
+    margin-bottom: 0px;
+    color: #545454;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: ExtraLight 200;
+    font-family: 23px;
+  }
+
+  label{
+    margin-bottom: 0px;
+  }
+
+  h1{
+    margin-bottom: 15px;
+  }
