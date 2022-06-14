@@ -7,6 +7,7 @@ import { TemaComponent } from './tema/tema.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:"postagem", component:PostagemComponent },
   {path: "tema", component: TemaComponent},
   {path:"inicio", component: LandingPageComponent},
-  {path:"minhaspostagens", component: MinhaspostagensComponent}
+  {path:"minhaspostagens", component: MinhaspostagensComponent},
+  {path: "rodape", component: FooterComponent}
 
 ];
 
