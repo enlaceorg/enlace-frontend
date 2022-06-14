@@ -1,10 +1,10 @@
+import { PostagemService } from './../service/postagem.service';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../model/Usuario';
 import { Tema } from '../model/Tema';
 import { Postagem } from '../model/Postagem';
 import { Router, ActivatedRoute } from '@angular/router';
-import { PostagemService } from '../service/postagem.service';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 
@@ -23,6 +23,8 @@ export class MinhaspostagensComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
   idPost: number
+  postagemSelecionada: number
+  post: Postagem = new Postagem()
 
   constructor(
   public router: Router, 
@@ -90,11 +92,20 @@ export class MinhaspostagensComponent implements OnInit {
     })
   }
 
-  apagar(){
-    this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
+  apagarSelecionada(){
+    this.postagemService.deletePostagem(this.postagemSelecionada).subscribe(()=>{
       alert('Postagem apagada com sucesso!')
+      this.idPost = this.route.snapshot.params['id']
+      this.findByIdPostagem(this.idPost)
+      this.getAllPostagem();
+      this.getAllTemas();
+      this.findByIdUsuario();
       this.router.navigate(['/minhaspostagens'])
-    })
+  })
+}
+
+  selecionarPostagem(id:number){
+    this.postagemSelecionada=id
   }
 
 
