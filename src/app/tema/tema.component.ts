@@ -15,7 +15,7 @@ export class TemaComponent implements OnInit {
   listaTemas: Tema[]
   idTema: number
   temaSelecionado: Tema = new Tema()
-
+  editarTema: Tema = new Tema()
 
 
   constructor(
@@ -67,9 +67,11 @@ private route: ActivatedRoute
   }
 
   editarSelecionado(){
-    this.temaService.putTema(this.tema).subscribe((resp: Tema)=>{
+    this.temaService.putTema(this.temaSelecionado).subscribe((resp: Tema)=>{
       this.tema = resp
       alert('Tema atualizado com sucesso')
+      this.router.navigate(['/tema'])
+      this.findAllTemas()
     })
   }
 
