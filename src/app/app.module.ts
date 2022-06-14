@@ -22,6 +22,7 @@ import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.compo
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
+import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
     PostagemApagarComponent,
     NavbarLogadoComponent,
     TemaComponent,
-    EncontreOngsComponent
+    EncontreOngsComponent,
+    VoltarAoTopoComponent
   ],
   imports: [
     BrowserModule,
