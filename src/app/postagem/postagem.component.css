@@ -3,11 +3,11 @@
 }
 
 .logo-lateral {
-  opacity: .8;
+  opacity: .5;
   position: fixed;
   z-index: 99;
   top:140px;
-  right:  -16px;
+  right:-16px;
 
 }
 
