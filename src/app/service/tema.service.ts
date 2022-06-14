@@ -20,7 +20,7 @@ export class TemaService {
   }
 
   getByIdTema(id:number):Observable<Tema>{
-    return this.http.get<Tema>(`https://enlaceorg.herokuapp.com/usuarios/${id}`, this.token);
+    return this.http.get<Tema>(`https://enlaceorg.herokuapp.com/temas/${id}`, this.token);
   }
 
   postTema(tema: Tema):Observable<Tema>{
