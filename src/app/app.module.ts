@@ -21,6 +21,7 @@ import { PostagemEditarComponent } from './postagem-editar/postagem-editar.compo
 import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { TemaComponent } from './tema/tema.component';
     PostagemEditarComponent,
     PostagemApagarComponent,
     NavbarLogadoComponent,
-    TemaComponent
+    TemaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

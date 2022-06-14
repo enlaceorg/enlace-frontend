@@ -4,34 +4,29 @@
       <div class="col-md-2">
         <h1 class="azulTema d-flex justify-content-center">Temas</h1>
       </div>
-
-      <div class="col-md-4 pr-0 p-0">
-        <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a tag do tema" />
-
-        <input [(ngModel)]="tema.tag" type="text" class="form-control " placeholder="Digite a tag do tema" />
-      </div>
-
       <div>
-        <button type="submit" class="btn btn-cadastrar botaoborda pt-1 ml-2" (click)="cadastrarTema()">Cadastrar</button>
+        <button type="submit" class="btn btn-cadastrar botaoborda pt-1 ml-2" data-toggle="modal" data-target="#cadastrar">Cadastrar</button>
       </div>
 
       <div class="container-fluid  mt-5">
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <table class="table table-hover text-center">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th>#</th>
+                  <th scope="col">Tag</th>
                   <th scope="col">Descrição</th>
                   <th scope="col" class="text-right" style="padding-right: 50px;">Modificações</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor='let tema of listaTemas'>
+                  <th>{{tema.temaId}}</th>
                   <th>{{tema.tag}}</th>
                   <td>{{tema.descricao}}</td>
                   <td class="d-flex justify-content-end">
-                    <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#confirmaEditar">Editar</button>
+                    <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#editar">Editar</button>
                     <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar">Apagar</button>
                   </td>
                 </tr>
@@ -59,7 +54,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-        <button type="button" class="btn btn-primary" (click)="apagar()" data-dismiss="modal">Sim</button>
+        <button type="button" class="btn btn-simApagar" (click)="apagar()" data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>
@@ -68,23 +63,55 @@
 
 
 <!--Modal Editar-->
-<div id="confirmaEditar" class="modal" tabindex="-1">
+<div id="editar" class="modal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Editar</h5>
+        <h5 class="modal-title ft">Editar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Você tem certeza que deseja editar o tema {{tema.descricao}}</p>
+        <p class="ft mb-0">Tag:</p>
+        <input [(ngModel)]="tema.tag" type="text" class="form-control  mb-4" placeholder="Digite a tag do tema" />
+
+        <p class="ft mb-0">Descrição:</p>
+        <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-        <button type="button" class="btn btn-primary" (click)="editar()" data-dismiss="modal">Sim</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary" (click)='editar()' data-dismiss="modal">Editar</button>
       </div>
     </div>
   </div>
 </div>
 <!--Modal Atualizar-->
+
+<!--Modal Cadastrar Tema-->
+
+<div id="cadastrar" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title ft">Cadastrar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="ft mb-0">Tag:</p>
+        <input [(ngModel)]="tema.tag" type="text" class="form-control  mb-4" placeholder="Digite a tag do tema" />
+
+        <p class="ft mb-0">Descrição:</p>
+        <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary" (click)="cadastrarTema()" data-dismiss="modal">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal Cadastrar Tema-->
