@@ -23,6 +23,8 @@ import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component
     TemaComponent,
     EncontreOngsComponent,
     VoltarAoTopoComponent
+    FooterComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
