@@ -21,9 +21,9 @@ const routes: Routes = [
   {path: "tema", component: TemaComponent},
   {path:"inicio", component: LandingPageComponent},
   {path:"minhaspostagens", component: MinhaspostagensComponent},
-  {path:"encontreongs", component: EncontreOngsComponent}
+  {path:"encontreongs", component: EncontreOngsComponent},
   {path:"minhaspostagens/apagar/:id", component: MinhaspostagensComponent},
-  {path:"minhaspostagens/editar/:id", component: PostagemEditarComponent}
+  {path:"minhaspostagens/editar/:id", component: PostagemEditarComponent},
   {path: "rodape", component: FooterComponent}
 ];
 

@@ -46,7 +46,7 @@ import { FooterComponent } from './footer/footer.component';
     NavbarLogadoComponent,
     TemaComponent,
     EncontreOngsComponent,
-    VoltarAoTopoComponent
+    VoltarAoTopoComponent,
     FooterComponent
   ],
   
