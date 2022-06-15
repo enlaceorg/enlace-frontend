@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class NavbarLogadoComponent implements OnInit {
   nome = environment.nome
-  foto = environment.imagemUrl != "" ? 'https://i.pinimg.com/originals/78/2a/96/782a9625ef88b770e4639ca75e39341e.jpg' : environment.imagemUrl
+  foto = environment.imagemUrl 
 
   constructor(
     private router: Router

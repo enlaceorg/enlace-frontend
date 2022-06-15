@@ -25,6 +25,7 @@ export class PostagemComponent implements OnInit {
 
 
 
+
   constructor(public router: Router, private postagemService: PostagemService, private temaService: TemaService, private authService: AuthService) { }
 
   ngOnInit() {
