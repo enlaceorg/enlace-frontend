@@ -14,6 +14,9 @@ export class TemaComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
   idTema: number
+  temaSelecionado: Tema = new Tema()
+  editarTema: Tema = new Tema()
+
 
   constructor(
 private router: Router,
@@ -26,6 +29,9 @@ private route: ActivatedRoute
     if (environment.token == ""){
       this.router.navigate(['/entrar'])
     }
+
+    console.log(environment.token)
+
     this.findAllTemas()
     this.idTema = this.route.snapshot.params['temaId']
     this.findByIdTemas(this.idTema)
@@ -37,8 +43,8 @@ private route: ActivatedRoute
     })
   }
 
-  findByIdTemas(id: number){
-    this.temaService.getByIdTema(id).subscribe((resp: Tema) =>{
+  findByIdTemas(idTema: number){
+    this.temaService.getByIdTema(idTema).subscribe((resp: Tema) =>{
       this.tema = resp
     })
   }
@@ -52,19 +58,27 @@ private route: ActivatedRoute
     }) 
   }
 
-  apagar(){
-    this.temaService.deleteTema(this.idTema).subscribe(() =>{
+  apagarSelecionado(){
+    this.temaService.deleteTema(this.temaSelecionado.temaId).subscribe(() =>{
       alert('Tema apagado com sucesso')
+      this.router.navigate(['/tema'])
+      this.findAllTemas()
     })
   }
 
-  editar(){
-    this.temaService.putTema(this.tema).subscribe((resp: Tema)=>{
+  editarSelecionado(){
+    this.temaService.putTema(this.temaSelecionado).subscribe((resp: Tema)=>{
       this.tema = resp
       alert('Tema atualizado com sucesso')
+      this.router.navigate(['/tema'])
+      this.findAllTemas()
     })
   }
 
- 
+ selecionarTema(tema: Tema){
+   this.temaSelecionado.descricao = tema.descricao
+   this.temaSelecionado.tag = tema.tag
+   this.temaSelecionado.temaId = tema.temaId
+ }
 
 }

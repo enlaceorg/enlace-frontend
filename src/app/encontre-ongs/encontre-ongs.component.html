@@ -1,0 +1,10 @@
+<div class="card-columns">
+    <ng-container *ngFor="let usuario of usuarios">
+        <div class="card" *ngIf="usuario.tipo == 'Organização não-governamental'">
+            <img class="card-img-top" src={{usuario.imagemUrl}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{usuario.nome}}</h5>
+            </div>
+        </div>
+    </ng-container>
+</div>
