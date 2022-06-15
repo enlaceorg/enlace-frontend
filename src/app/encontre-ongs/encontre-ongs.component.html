@@ -1,3 +1,6 @@
+
+
+<!--
 <div class="card-columns">
     <ng-container *ngFor="let usuario of usuarios">
         <div class="card" *ngIf="usuario.tipo == 'Organização não-governamental'">
@@ -9,37 +12,52 @@
     </ng-container>
 </div>
 
-
-
-
+-->
 
 
 <div class="container">
     <div class="row">
-        <div class="col-md-1"></div>
+
         <div class="col-md-6">
             <div>
-                <h1 class="fonteencontre"><strong class="text-warning">encontre </strong> <strong
-                        class="corong">ongs</strong></h1>
+                <h1 class="fonteencontre"><strong class="text-warning">encontre </strong>
+                    <strong class="corong">ongs</strong>
+                </h1>
             </div>
 
-            <div>
-                <nav class="navbar navbar-light bg-light mt-0">
-                    <form class="form-group tamanhobarra">
-                        <input class="form-control mr-sm-2" type="search" placeholder=""
-                            aria-label="Pesquisar">
-                        <button class="btn btn-warning my-2 my-sm-0 botaopesq" type="submit"><i class="fa fa-search"
-                                aria-hidden="true"></i></button>
-                    </form>
-                </nav>
+            <div class="input-group mb-3 mt-3">
+                <input type="text" class="form-control">
+                <div class="input-group-append"><button class="btn btn-warning"><i class="fas fa-search"></i></button>
+                </div>
             </div>
 
-            <div class="card float-right mt-6">
+            <div class="card float-right mt-4">
                 <div class="row">
                     <div class="col-sm-5">
                         <img class="d-block w-100 " src="https://i.imgur.com/E1hPA6A.png" alt="mulher com bolo">
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-sm-7 corpocard">
+                        <div class="card-block">
+                            <!--           <h4 class="card-title">Small card</h4> -->
+                            <p>Copy paste the HTML and CSS.</p>
+                            <p>Change around the content for awsomenes</p>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="card float-right mt-4">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <img class="d-block w-100 " src="https://i.imgur.com/E1hPA6A.png" alt="mulher com bolo">
+                    </div>
+                    <div class="col-sm-7 corpocard">
                         <div class="card-block">
                             <!--           <h4 class="card-title">Small card</h4> -->
                             <p>Copy paste the HTML and CSS.</p>
@@ -54,8 +72,9 @@
             </div>
 
         </div>
-        <div class="col-md-5">
-            <img src="https://i.imgur.com/j0ftxO0.jpg" alt="">
+
+        <div class="col-md-5 imagem">
+            <img class="" src="https://i.imgur.com/j0ftxO0.jpg" alt="">
         </div>
 
 
