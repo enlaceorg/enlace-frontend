@@ -21,6 +21,10 @@ import { PostagemEditarComponent } from './postagem-editar/postagem-editar.compo
 import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
+import { BotaoPostagemComponent } from './botao-postagem/botao-postagem.component';
+import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
+import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -40,8 +44,13 @@ import { TemaComponent } from './tema/tema.component';
     PostagemEditarComponent,
     PostagemApagarComponent,
     NavbarLogadoComponent,
-    TemaComponent
+    TemaComponent,
+    BotaoPostagemComponent,
+    EncontreOngsComponent,
+    VoltarAoTopoComponent,
+    FooterComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

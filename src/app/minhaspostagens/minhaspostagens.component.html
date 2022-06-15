@@ -1,52 +1,72 @@
-<body>
+  <body>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-7 d-flex justify-content-center" style="margin-top: 100px;">
-        <div class="card-deck">
-  
-            <div class="card">
-              <img class="card-img-top" src="https://i.imgur.com/E3vIUvy.jpg" alt="Card image cap">
+        <div class="card-columns">
+   
+            <div class="card" *ngFor='let item of usuario.postagem'>
+              <img class="card-img-top" src="{{ item.imagem }}" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title">Usuário</h5>
-                <p class="card-text">Se alguém ama uma flor da qual só exista um exemplar em milhões e milhões de estrelas, isso basta para fazê-lo feliz quando as contempla. Ele pensa "Minha flor está lá, em algum lugar..." Mas se o carneiro come a flor, é, para ele, como se todas as estrelas se repentinamente se apagassem! E isto não tem importância?</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text">{{ item.conteudo }}</p>
+                <p class="card-text"><small class="text-muted">
+                  {{ item.atualizadoEm | date: 'dd/MM/yyyy' }} às
+                  {{ item.atualizadoEm | date: 'HH:mm' }}
+                </small></p>
               </div>
               <div class="d-flex justify-content-center">
-                <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                <button type="submit" class="botaoCircular iconDentro" [routerLink]="['/minhaspostagens/editar/', item.postagemId]" > <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                <button type="button" class="botaoCircular iconDentro"  [routerLink]="['/minhaspostagens/apagar/', item.postagemId]" data-toggle="modal" data-target="#modal-apagar"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
               </div>
-            </div>
-  
-            <div class="card">
-              <img class="card-img-top" src="https://i.imgur.com/E3vIUvy.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Usuário</h5>
-                <p class="card-text">Se alguém ama uma flor da qual só exista um exemplar em milhões e milhões de estrelas, isso basta para fazê-lo feliz quando as contempla. Ele pensa "Minha flor está lá, em algum lugar..." Mas se o carneiro come a flor, é, para ele, como se todas as estrelas se repentinamente se apagassem! E isto não tem importância?</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-              </div>
-            </div>
-  
-            <div class="card">
-              <img class="card-img-top" src="https://i.imgur.com/E3vIUvy.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Usuário</h5>
-                <p class="card-text">Se alguém ama uma flor da qual só exista um exemplar em milhões e milhões de estrelas, isso basta para fazê-lo feliz quando as contempla. Ele pensa "Minha flor está lá, em algum lugar..." Mas se o carneiro come a flor, é, para ele, como se todas as estrelas se repentinamente se apagassem! E isto não tem importância?</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-              </div>
-            </div>
-  
+            </div> 
+            
         </div>
       </div>
       <div class="col-md-3"></div>
     </div>
   </div>  
 </body>
+
+<div class="modal" tabindex="-1" id="modal-apagar">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Apagar Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Você tem certeza que quer apagar a postagem?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="apagar()">Apagar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+  <div class="card mb-3">
+  <img class="card-img-top" src="{{ postagem.imagem }}" alt="Imagem de capa do card" />
+  <div class="card-body">
+    <h5 class="card-title">
+      <div>
+        <img src="{{ usuario.imagemUrl }}" />
+        <p class="card-text">{{ usuario.nome }}</p>
+        <p>{{ tema.tag }}</p>
+      </div>
+    </h5>
+    <p class="card-text">{{ postagem.conteudo }}</p>
+    <p class="card-text">
+      <small class="text-muted"><small class="text-muted">
+          {{ postagem.criadoEm | date: "dd/MM/yyyy" }} às
+          {{ postagem.criadoEm | date: "HH:mm" }}
+        </small>
+      </small>
+    </p>
+    <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+    <button type="submit" class="botaoCircular iconDentro"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+  </div>
+-->

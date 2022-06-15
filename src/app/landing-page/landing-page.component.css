@@ -32,10 +32,19 @@ section {
 }
 
 #sobre-nos {
-    background-color: #f36c4a;
+    background-color: #fff;
+    /*background-color: #f36c4a;*/
 }
 
-
 #contato {
-    background-color: #4a77f3;
+    background-color: #fff;
+    /*background-color: #4a77f3;*/
+}
+
+#inicio {
+    margin-bottom: 100px;
+}
+
+#footer {
+    height: 150px;
 }
