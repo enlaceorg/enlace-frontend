@@ -1,10 +1,10 @@
+import { PostagemService } from './../service/postagem.service';
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../model/Usuario';
 import { Tema } from '../model/Tema';
 import { Postagem } from '../model/Postagem';
 import { Router, ActivatedRoute } from '@angular/router';
-import { PostagemService } from '../service/postagem.service';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
 
@@ -18,23 +18,22 @@ export class MinhaspostagensComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.usuarioId
   tema: Tema = new Tema()
-  listaTema: Tema[]
+  listaTemas: Tema[]
   idTema: number
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
   idPost: number
+  postagemSelecionada: Postagem = new Postagem()  
 
   constructor(
-  public router: Router, 
-  public route: ActivatedRoute,
-  private postagemService: PostagemService, 
-  private temaService: TemaService, 
-  private authService: AuthService) 
-
-  { }
+    public router: Router,
+    public route: ActivatedRoute,
+    private postagemService: PostagemService,
+    private temaService: TemaService,
+    private authService: AuthService) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     if (environment.token == '') {
       // alert('Sua seção expirou, faça o login novamente');
       this.router.navigate(['/entrar']);
@@ -49,7 +48,7 @@ export class MinhaspostagensComponent implements OnInit {
 
   getAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
-      this.listaTema = resp
+      this.listaTemas = resp
     })
   }
 
@@ -71,31 +70,59 @@ export class MinhaspostagensComponent implements OnInit {
     })
   }
 
-  editar(){
-    this.tema.temaId=this.idTema
-    this.postagem.tema=this.tema
-    this.usuario.usuarioId=this.idUsuario
-    this.postagem.usuario=this.usuario
+  editar() {
+    this.tema.temaId = this.idTema
+    this.postagem.tema = this.tema
+    this.usuario.usuarioId = this.idUsuario
+    this.postagem.usuario = this.usuario
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem)=>{
-      this.postagem=resp
-      alert("Postagem realizada com sucesso!") 
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert("Postagem realizada com sucesso!")
       this.postagem = new Postagem()
     })
   }
 
-  findByIdPostagem(id: number){
+  findByIdPostagem(id: number) {
     this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
 
-  apagar(){
-    this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
+  apagarSelecionada() {
+    this.postagemService.deletePostagem(this.postagemSelecionada.postagemId).subscribe(() => {
       alert('Postagem apagada com sucesso!')
+      this.idPost = this.route.snapshot.params['id']
+      this.findByIdPostagem(this.idPost)
+      this.getAllPostagem();
+      this.getAllTemas();
+      this.findByIdUsuario();
       this.router.navigate(['/minhaspostagens'])
     })
   }
+
+  selecionarPostagem(postagem: Postagem) {
+    this.postagemSelecionada.postagemId=postagem.postagemId
+    this.postagemSelecionada.imagem=postagem.imagem
+    this.postagemSelecionada.conteudo = postagem.conteudo
+    this.postagemSelecionada.tema = postagem.tema
+    this.postagemSelecionada.usuario = postagem.usuario
+  }
+
+  atualizarSelecionada() {
+    this.tema.temaId = this.idTema
+    this.postagemService.putPostagem(this.postagemSelecionada).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem atualizada com sucesso!')
+      this.findByIdPostagem(this.idPost)
+      this.getAllPostagem();
+      this.getAllTemas();
+      this.findByIdUsuario();
+      this.router.navigate(['/minhaspostagens'])
+    })
+  }
+
+
 
 
 }

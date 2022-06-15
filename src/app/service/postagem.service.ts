@@ -33,7 +33,8 @@ putPostagem(postagem: Postagem): Observable<Postagem>{
 }
 
 deletePostagem(id: number){
-  return this.http.delete(`https://enlaceorg.herokuapp.com/postagens/${id}`, this.token)
+  return this.http.delete(`https://enlaceorg.herokuapp.com/postagens/${id}`,
+  {headers: new HttpHeaders().set('Authorization', environment.token)})
 }
 
 }
