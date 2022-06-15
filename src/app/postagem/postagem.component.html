@@ -4,69 +4,48 @@
       <div class="barra-lateral"></div>
     </div>
 
-    <!-- <div class="col-md-6">
-      <div class="card mb-3">
-        <img class="card-img-top" src="{{ postagem.imagem }}" alt="Imagem de capa do card" />
-        <div class="card-body">
-          <h5 class="card-title">
-            <div>
-              <img src="{{ usuario.imagemUrl }}" />
-              <p class="card-text">{{ usuario.nome }}</p>
-              <p>{{ tema.tag }}</p>
-            </div>
-          </h5>
-          <p class="card-text">{{ postagem.conteudo }}</p>
-          <p class="card-text">
-            <small class="text-muted"><small class="text-muted">
-                {{ postagem.criadoEm | date: "dd/MM/yyyy" }} às
-                {{ postagem.criadoEm | date: "HH:mm" }}
-              </small>
-            </small>
-          </p>
-        </div>
-      </div> -->
-
     <div class="col-md-6">
-      <div class="card mb-3">
-        <img class="card-img-top" src="https://i.imgur.com/S50vxAo.jpg" alt="Imagem de capa do card" />
+      <div class="card mb-3" *ngFor='let item of listaPostagem'>
+        <img class="card-img-top" src="{{ item.imagem }}" alt="Imagem de capa do card" />
         <div class="card-body bg-fundo">
           <h5 class="card-title">
             <div class="d-flex align-items-center justify-content-start">
               <div>
-                <img class="rounded-circle" width="50px" height="50px" src="https://i.imgur.com/g6ei7uI.jpg" />
+                <img class="rounded-circle" width="50px" height="50px" src="{{item.usuario.imagemUrl}}" />
               </div>
               <div class="ml-1">
-                <p class="card-text margin-0">Gustavo</p>
-                <p class="fz-15">Tema: pinga</p>
+                <p class="card-text margin-0">{{item.usuario.nome}}</p>
+                <p class="fz-15">Tema: {{item.tema.tag}} </p>
               </div>
-
             </div>
           </h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsum rem, iste ex totam
-            explicabo praesentium, iusto repellat laborum atque quisquam perspiciatis? Ratione, officia iure incidunt
-            dolorem accusantium et aliquid?</p>
+          <p class="card-text">
+            {{item.conteudo}}
+          </p>
+        </div>
 
-        </div>
-        <div class="">
-        <div class="d-flex justify-content-between">
-          <div>
-            <p class="card-text">
-              <small class="text-muted"><small>
-                  14/06
+        <div>
+          <div class="d-flex justify-content-between">
+            <div>
+              <p class="card-text ml-4">
+                <small>
+                  {{ item.criadoEm | date: "dd/MM/yyyy" }} às
+                  {{ item.criadoEm | date: "HH:mm" }}
                 </small>
-              </small>
-            </p>
-          </div>
-          <div>
-            <i class="fa-thin fa-hand-holding-heart fz-15"></i>
+              </p>
+            </div>
+            <div>
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
 
     <div class="col-md-3 logo-lateral d-flex justify-content-end">
-      <img class="img-fluid imagem-lateral" src="https://i.imgur.com/gSTt4CE.png" width="500em" height="250em" alt="" />
+      <img class="img-fluid imagem-lateral" src="https://i.imgur.com/EJKdT0t.png" width="500em" height="250em" alt="" />
     </div>
   </div>
 </div>
+
+<app-botao-postagem></app-botao-postagem>
