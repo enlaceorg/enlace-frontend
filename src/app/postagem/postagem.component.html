@@ -4,28 +4,6 @@
       <div class="barra-lateral"></div>
     </div>
 
-    <!-- <div class="col-md-6">
-      <div class="card mb-3">
-        <img class="card-img-top" src="{{ postagem.imagem }}" alt="Imagem de capa do card" />
-        <div class="card-body">
-          <h5 class="card-title">
-            <div>
-              <img src="{{ usuario.imagemUrl }}" />
-              <p class="card-text">{{ usuario.nome }}</p>
-              <p>{{ tema.tag }}</p>
-            </div>
-          </h5>
-          <p class="card-text">{{ postagem.conteudo }}</p>
-          <p class="card-text">
-            <small class="text-muted"><small class="text-muted">
-                {{ postagem.criadoEm | date: "dd/MM/yyyy" }} às
-                {{ postagem.criadoEm | date: "HH:mm" }}
-              </small>
-            </small>
-          </p>
-        </div>
-      </div> -->
-
     <div class="col-md-6">
       <div class="card mb-3" *ngFor='let item of listaPostagem'>
         <img class="card-img-top" src="{{ item.imagem }}" alt="Imagem de capa do card" />
@@ -45,6 +23,7 @@
             {{item.conteudo}}
           </p>
         </div>
+
         <div>
           <div class="d-flex justify-content-between">
             <div>
@@ -52,7 +31,6 @@
                 <small>
                   {{ item.criadoEm | date: "dd/MM/yyyy" }} às
                   {{ item.criadoEm | date: "HH:mm" }}
-
                 </small>
               </p>
             </div>

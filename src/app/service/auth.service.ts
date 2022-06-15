@@ -5,11 +5,11 @@ import { Usuario } from '../model/Usuario';
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { environment } from '../../environments/environment.prod';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
 
   constructor(
     public http: HttpClient
@@ -34,7 +34,12 @@ export class AuthService {
   }
 
   getByIdUsuario(id: number):Observable<Usuario>{
-    return this.http.get<Usuario>(`https://enlaceorg.herokuapp.com/usuarios/cadastro/${id}`, this.token)
+    return this.http.get<Usuario>(`https://enlaceorg.herokuapp.com/usuarios/${id}`, 
+    {headers: new HttpHeaders().set('Authorization', environment.token)})
+  }
+
+  getTodosUsuarios(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>('https://enlaceorg.herokuapp.com/usuarios', this.token);
   }
 
   logado(){

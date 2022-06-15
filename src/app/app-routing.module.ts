@@ -7,6 +7,9 @@ import { TemaComponent } from './tema/tema.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
+import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
+import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -17,8 +20,11 @@ const routes: Routes = [
   {path:"postagem", component:PostagemComponent },
   {path: "tema", component: TemaComponent},
   {path:"inicio", component: LandingPageComponent},
-  {path:"minhaspostagens", component: MinhaspostagensComponent}
-
+  {path:"minhaspostagens", component: MinhaspostagensComponent},
+  {path:"encontreongs", component: EncontreOngsComponent}
+  {path:"minhaspostagens/apagar/:id", component: MinhaspostagensComponent},
+  {path:"minhaspostagens/editar/:id", component: PostagemEditarComponent}
+  {path: "rodape", component: FooterComponent}
 ];
 
 @NgModule({
