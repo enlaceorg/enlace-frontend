@@ -7,12 +7,19 @@ button:hover{
     background-color: #545454;
 }
 
+input{
+    outline: none;
+    border: none;
+}
+
 .fonteencontre{
-    font-size: 90px;
+    font-size: 70px;
     margin-top: 30px;
-    font-family: YAFCRTyQOlE;
+    margin-bottom: 0px;
+    font-family: 'Epilogue', sans-serif;
     font-style: normal;
     line-height: 100px;
+    font-weight: ExtraLight 200;
 }
 
 .corong{
@@ -41,4 +48,12 @@ i{
     justify-content: center;
     align-items: center;
     display:inline-flex;
+}
+
+#fotocard{
+    flex-shrink: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover; 
+
 }
