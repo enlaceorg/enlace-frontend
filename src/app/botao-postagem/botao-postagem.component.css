@@ -1,7 +1,8 @@
 .botao{
+  flex-direction: column;
   position: fixed;
   left: 60em;
-  top: 340px;
+  top: 400px;
 }
 
 .btn-personalizado{
@@ -19,6 +20,9 @@ p{
   opacity: 1;
 }
 
+
+
 i {
   color: white;
 }
+

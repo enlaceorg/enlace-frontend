@@ -1,6 +1,5 @@
 <!-- BOTAO  -->
-
-<div class="d-flex justify-content-center botao btn-group-lg btn-group btn-group-vertical">
+<div class="d-flex justify-content-center botao m-3 p-2">
   <div class="d-flex justify-content-between align-items-baseline">
     <div>
       <button type="button" data-toggle="modal" data-target="#novaPublicacao"
@@ -59,14 +58,14 @@
         <div class="form-group">
           <label for="tema">Escolha o tema</label>
           <select name="temas" id="tema" class="form-control" [(ngModel)]="idTema" (change)="findByIdTema()">
-            <option *ngFor="let item of listaTema" value="{{item.temaId}} ">{{item.tag}}</option>
+            <option *ngFor="let item of listaTema" value="{{item.temaId}} ">{{item.descricao}}</option>
           </select>
         </div>
 
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button (click)="publicar()" type="button" class="btn btn-success" data-dismiss="modal">Publicar</button>
       </div>
     </div>
