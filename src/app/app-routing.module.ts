@@ -7,6 +7,7 @@ import { TemaComponent } from './tema/tema.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
+import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';

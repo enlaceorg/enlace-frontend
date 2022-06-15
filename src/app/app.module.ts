@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -21,10 +20,12 @@ import { PostagemEditarComponent } from './postagem-editar/postagem-editar.compo
 import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
+import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { BotaoPostagemComponent } from './botao-postagem/botao-postagem.component';
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component';
 import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { FooterComponent } from './footer/footer.component';
     PostagemApagarComponent,
     NavbarLogadoComponent,
     TemaComponent,
+    EncontreOngsComponent,
     BotaoPostagemComponent,
     EncontreOngsComponent,
     VoltarAoTopoComponent,
