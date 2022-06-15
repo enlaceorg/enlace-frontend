@@ -1,0 +1,59 @@
+.corpocard{
+    background-color: rgb(217, 217, 217);
+    
+}
+
+button:hover{
+    background-color: #545454;
+}
+
+input{
+    outline: none;
+    border: none;
+}
+
+.fonteencontre{
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    line-height: 100px;
+    font-weight: ExtraLight 200;
+}
+
+.corong{
+    color: #545454;
+}
+
+.tamanhobarra{
+    width: 400px;
+}
+
+
+i{
+    color: white;
+}
+
+.botaopesq:hover{
+    background-color:#545454;
+    color: #fdfefd;  
+    border-color: #545454; 
+}
+
+.imagem
+{
+    margin-top: 80px;
+    margin-left: 90px;
+    justify-content: center;
+    align-items: center;
+    display:inline-flex;
+}
+
+#fotocard{
+    flex-shrink: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover; 
+
+}

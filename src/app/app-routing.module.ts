@@ -11,7 +11,6 @@ import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
 import { FooterComponent } from './footer/footer.component';
 
-
 const routes: Routes = [
 
   {path:"", redirectTo:"inicio", pathMatch:"full"},

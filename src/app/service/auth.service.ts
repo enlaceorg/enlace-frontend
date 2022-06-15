@@ -39,7 +39,8 @@ export class AuthService {
   }
 
   getTodosUsuarios(): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>('https://enlaceorg.herokuapp.com/usuarios', this.token);
+    return this.http.get<Usuario[]>('https://enlaceorg.herokuapp.com/usuarios', 
+    {headers: new HttpHeaders().set('Authorization', environment.token)});
   }
 
   logado(){
