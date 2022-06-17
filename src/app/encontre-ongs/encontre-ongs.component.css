@@ -48,6 +48,7 @@ i{
     justify-content: center;
     align-items: center;
     display:inline-flex;
+  
 }
 
 #fotocard{
@@ -56,4 +57,12 @@ i{
     height: 50%;
     object-fit: cover; 
 
+}
+
+input{
+    background-color: rgb(217, 217, 217);
+}
+
+input:hover{
+    background-color: rgb(217, 217, 217);
 }
