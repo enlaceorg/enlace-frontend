@@ -1,0 +1,28 @@
+.botao{
+  flex-direction: column;
+  position: fixed;
+  left: 63em;
+  top: 400px;
+}
+
+.btn-personalizado{
+  background-color:#f16a4a ;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+p{
+  opacity: 1;
+}
+
+.seleciona {
+  opacity: 1;
+}
+
+
+
+i {
+  color: white;
+}
+

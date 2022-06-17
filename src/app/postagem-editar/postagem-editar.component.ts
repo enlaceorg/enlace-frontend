@@ -60,6 +60,7 @@ export class PostagemEditarComponent implements OnInit {
   atualizar(){
     this.tema.temaId = this.idTema
     this.postagem.tema = this.tema
+  
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp

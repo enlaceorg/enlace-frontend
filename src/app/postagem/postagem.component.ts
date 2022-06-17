@@ -25,6 +25,7 @@ export class PostagemComponent implements OnInit {
 
 
 
+
   constructor(public router: Router, private postagemService: PostagemService, private temaService: TemaService, private authService: AuthService) { }
 
   ngOnInit() {
@@ -35,7 +36,21 @@ export class PostagemComponent implements OnInit {
     this.authService.refreshToken();
     this.getAllPostagem();
     this.getAllTemas();
+
+
+
   }
+
+
+  // CRUD
+  getAllPostagem(){
+    this.postagemService.getAllPostagens().subscribe({
+      next: (resp: Postagem[]) => {
+        this.listaPostagem = resp
+      },
+    })
+  }
+
 
   getAllTemas() {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
@@ -49,28 +64,10 @@ export class PostagemComponent implements OnInit {
     })
   }
 
-  getAllPostagem() {
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
-      this.listaPostagem = resp
-    })
-  }
 
   findByIdUser() {
     this.authService.getByIdUsuario(this.idTema).subscribe((resp: Usuario) => {
       this.usuario = resp
-    })
-  }
-
-  publicar(){
-    this.tema.temaId=this.idTema
-    this.postagem.tema=this.tema
-    this.usuario.usuarioId=this.idUsuario
-    this.postagem.usuario=this.usuario
-
-    this.postagemService.postPostagem(this.postagem).subscribe((resp:Postagem)=>{
-      this.postagem=resp
-      alert("Postagem realizada com sucesso!") 
-      this.postagem = new Postagem()
     })
   }
 

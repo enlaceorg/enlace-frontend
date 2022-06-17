@@ -1,13 +1,23 @@
+.fundo {
+
+  background-image: url(
+https://i.imgur.com/miHbfgN.jpg
+);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+}
+
 .barra-lateral{
   background-color: gray;
 }
 
 .logo-lateral {
-  opacity: .8;
+  opacity: .5;
   position: fixed;
   z-index: 99;
   top:140px;
-  right:  -16px;
+  right:-16px;
 
 }
 
@@ -30,4 +40,5 @@
       width: auto;
   }
 }
+
 

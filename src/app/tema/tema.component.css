@@ -58,9 +58,8 @@
     color:#215DF2;
 }
 .fundo{
-  background-image: url(https://i.imgur.com/1fQpY8S.png);  
-  position: fixed;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
+  background-image: url(https://i.imgur.com/miHbfgN.jpg);  
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
 } 

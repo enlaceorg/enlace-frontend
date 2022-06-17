@@ -1,6 +1,5 @@
-
-  <div class="container-fluid fundo">
-    <div class="row d-flex justify-content-center align-items-center  mt-5">
+<div class="container-fluid fundo">
+    <div class="row d-flex justify-content-center align-items-center mt-5">
       <div class="col-md-2">
         <h1 class="azulTema d-flex justify-content-center">Temas</h1>
       </div>
@@ -14,7 +13,6 @@
             <table class="table table-hover text-center">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th scope="col">Tag</th>
                   <th scope="col">Descrição</th>
                   <th scope="col" class="text-right" style="padding-right: 50px;">Modificações</th>
@@ -22,12 +20,11 @@
               </thead>
               <tbody>
                 <tr *ngFor='let tema of listaTemas'>
-                  <th>{{tema.temaId}}</th>
                   <th>{{tema.tag}}</th>
                   <td>{{tema.descricao}}</td>
                   <td class="d-flex justify-content-end">
-                    <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#editar">Editar</button>
-                    <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar">Apagar</button>
+                    <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#editar" (click)="selecionarTema(tema)">Editar</button>
+                    <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar" (click)="selecionarTema(tema)">Apagar</button>
                   </td>
                 </tr>
               </tbody>
@@ -54,7 +51,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-        <button type="button" class="btn btn-simApagar" (click)="apagar()" data-dismiss="modal">Sim</button>
+        <button type="button" class="btn btn-simApagar" (click)="apagarSelecionado()" data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>
@@ -74,19 +71,19 @@
       </div>
       <div class="modal-body">
         <p class="ft mb-0">Tag:</p>
-        <input [(ngModel)]="tema.tag" type="text" class="form-control  mb-4" placeholder="Digite a tag do tema" />
+        <input [(ngModel)]="temaSelecionado.tag" type="text" class="form-control  mb-4" placeholder="Digite a tag do tema" />
 
         <p class="ft mb-0">Descrição:</p>
-        <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
+        <input [(ngModel)]="temaSelecionado.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-        <button type="button" class="btn btn-primary" (click)='editar()' data-dismiss="modal">Editar</button>
+        <button type="button" class="btn btn-primary" (click)='editarSelecionado()' data-dismiss="modal">Editar</button>
       </div>
     </div>
   </div>
 </div>
-<!--Modal Atualizar-->
+<!--Modal Editar-->
 
 <!--Modal Cadastrar Tema-->
 

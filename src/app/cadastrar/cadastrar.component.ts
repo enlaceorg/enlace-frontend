@@ -24,11 +24,17 @@ export class CadastrarComponent implements OnInit {
     window.scroll(0,0);
   }
 
+  padronizarFoto(){
+    if(this.usuario.imagemUrl == null){
+      this.usuario.imagemUrl = 'https://i.pinimg.com/originals/78/2a/96/782a9625ef88b770e4639ca75e39341e.jpg'
+    }
+  }
+
   confirmarSenha(event: any){
       this.senhaConfirmada = event.target.value;
   }
 
-  
+
 
   selecionarTipoUsuario(event: any){
     this.usuarioSelecionado = event.target.value;
@@ -37,6 +43,7 @@ export class CadastrarComponent implements OnInit {
 
 
   cadastrar(){
+    this.padronizarFoto()
     this.usuario.tipo = this.usuarioSelecionado;
     if(this.usuario.senha != this.senhaConfirmada) {
       alert('Você digitou senhas diferentes, verifique...');
