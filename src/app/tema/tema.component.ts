@@ -13,20 +13,23 @@ export class TemaComponent implements OnInit {
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
+  tagTema: string
+
+
   idTema: number
   temaSelecionado: Tema = new Tema()
   editarTema: Tema = new Tema()
 
 
   constructor(
-private router: Router,
-private temaService: TemaService,
-private route: ActivatedRoute
+    private router: Router,
+    private temaService: TemaService,
+    private route: ActivatedRoute
   ) { }
-  
+
 
   ngOnInit() {
-    if (environment.token == ""){
+    if (environment.token == "") {
       this.router.navigate(['/entrar'])
     }
 
@@ -37,37 +40,37 @@ private route: ActivatedRoute
     this.findByIdTemas(this.idTema)
   }
 
-  findAllTemas(){
-    this.temaService.getAllTema().subscribe((resp: Tema[] ) =>{
+  findAllTemas() {
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
     })
   }
 
-  findByIdTemas(idTema: number){
-    this.temaService.getByIdTema(idTema).subscribe((resp: Tema) =>{
+  findByIdTemas(idTema: number) {
+    this.temaService.getByIdTema(idTema).subscribe((resp: Tema) => {
       this.tema = resp
     })
   }
 
-  cadastrarTema(){
- this.temaService.postTema(this.tema).subscribe((resp: Tema)=> {
+  cadastrarTema() {
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
       this.tema = resp
       alert("Tema cadastrado com sucesso")
       this.findAllTemas()
       this.tema = new Tema()
-    }) 
+    })
   }
 
-  apagarSelecionado(){
-    this.temaService.deleteTema(this.temaSelecionado.temaId).subscribe(() =>{
+  apagarSelecionado() {
+    this.temaService.deleteTema(this.temaSelecionado.temaId).subscribe(() => {
       alert('Tema apagado com sucesso')
       this.router.navigate(['/tema'])
       this.findAllTemas()
     })
   }
 
-  editarSelecionado(){
-    this.temaService.putTema(this.temaSelecionado).subscribe((resp: Tema)=>{
+  editarSelecionado() {
+    this.temaService.putTema(this.temaSelecionado).subscribe((resp: Tema) => {
       this.tema = resp
       alert('Tema atualizado com sucesso')
       this.router.navigate(['/tema'])
@@ -75,10 +78,21 @@ private route: ActivatedRoute
     })
   }
 
- selecionarTema(tema: Tema){
-   this.temaSelecionado.descricao = tema.descricao
-   this.temaSelecionado.tag = tema.tag
-   this.temaSelecionado.temaId = tema.temaId
- }
+  selecionarTema(tema: Tema) {
+    this.temaSelecionado.descricao = tema.descricao
+    this.temaSelecionado.tag = tema.tag
+    this.temaSelecionado.temaId = tema.temaId
+  }
+
+  buscarPorNome() {
+    if (this.tagTema == '') {
+      this.findAllTemas()
+    } else {
+      this.temaService.getByNome(this.tagTema).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
+
+  }
 
 }
