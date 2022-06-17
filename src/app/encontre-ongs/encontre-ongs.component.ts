@@ -32,18 +32,16 @@ export class EncontreOngsComponent implements OnInit {
 
   encontrarOngs() {
     this.authService.getTodosUsuarios().subscribe((resp: Usuario[]) => {
-      this.listaUsuariosOng = resp
+      this.listaUsuariosOng = resp.filter(function (adm) {
+        return adm.tipo == 'adm'
+      });
     })
   }
 
+
   encontrarTodosUsuarios() {
     this.authService.getTodosUsuarios().subscribe((resp: Usuario[]) => {
-      resp.forEach
-        ((o) => {
-          if (o.tipo == 'adm') {
-            this.listaUsuariosOng = resp
-          }
-        })
+      this.listaUsuariosOng = resp
     })
   }
 
