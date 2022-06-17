@@ -99,3 +99,22 @@
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
 }
+
+/*Deixar os fundos cinza*/
+
+input{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+textarea{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+select{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+/*Deixa os fundos cinza*/
