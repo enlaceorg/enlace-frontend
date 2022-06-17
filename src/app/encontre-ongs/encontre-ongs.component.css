@@ -13,7 +13,7 @@ input{
 }
 
 .fonteencontre{
-    font-size: 70px;
+    font-size: 72px;
     margin-top: 30px;
     margin-bottom: 0px;
     font-family: 'Epilogue', sans-serif;
@@ -26,9 +26,6 @@ input{
     color: #545454;
 }
 
-.tamanhobarra{
-    width: 400px;
-}
 
 
 i{
@@ -41,15 +38,15 @@ i{
     border-color: #545454; 
 }
 
-.imagem
-{
-    margin-top: 80px;
-    margin-left: 90px;
-    justify-content: center;
-    align-items: center;
-    display:inline-flex;
-  
-}
+.fundo {
+
+    background-image: url(
+        https://i.imgur.com/7uvv0tE.jpg
+  );
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+  } 
 
 #fotocard{
     background-size: contain;
@@ -67,7 +64,7 @@ input:hover{
 }
 
 .tamanhocard{
-    width: 1000px;
+    width: 1200px;
     height: 120px;
 }
 

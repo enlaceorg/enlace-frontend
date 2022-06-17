@@ -11,8 +11,9 @@ import { AuthService } from '../service/auth.service';
 })
 export class EncontreOngsComponent implements OnInit {
 
-  usuarios: Usuario[]
+  listaUsuariosOng: Usuario[]
   idUsuario: number
+  usuario: Usuario = new Usuario()
 
   constructor(
     private router: Router,
@@ -26,12 +27,24 @@ export class EncontreOngsComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    this.encontrarTodosUsuarios()
+    this.encontrarOngs()
+  }
+
+  encontrarOngs() {
+    this.authService.getTodosUsuarios().subscribe((resp: Usuario[]) => {
+      this.listaUsuariosOng = resp
+    })
   }
 
   encontrarTodosUsuarios() {
     this.authService.getTodosUsuarios().subscribe((resp: Usuario[]) => {
-      this.usuarios = resp
+      resp.forEach
+        ((o) => {
+          if (o.tipo == 'adm') {
+            this.listaUsuariosOng = resp
+          }
+        })
     })
   }
+
 }
