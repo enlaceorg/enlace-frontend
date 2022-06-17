@@ -18,7 +18,7 @@
 
             <div class="card mb-3 w-75% h-75%"  *ngFor="let usuario of usuarios" style="max-width: 540px;">
                 
-                    <div class="row no-gutters" *ngIf="usuario.tipo == 'normal'">
+                    <div class="row no-gutters" *ngIf="usuario.tipo == 'adm'">
                         <div class="col-md-4">
                             <img src="{{usuario.imagemUrl}}" class="card-img" alt="...">
                         </div>
