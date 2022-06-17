@@ -41,17 +41,17 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Deletar</h5>
+        <h5 class="modal-title textoModalDelet">Deletar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Todos as postagens relacionadas serão deletadas também, deseja continuar?</p>
+        <p style="text-align: center;" class="mt-3">Todos as postagens relacionadas serão deletadas também, deseja continuar?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-        <button type="button" class="btn btn-simApagar" (click)="apagarSelecionado()" data-dismiss="modal">Sim</button>
+        <button type="button" class="btn btn-secondary btnCanc" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-simApagar botaoModalCentDelet" (click)="apagarSelecionado()" data-dismiss="modal">Apagar</button>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title ft">Editar</h5>
+        <h5 class="modal-title ft textoModalEdit">Editar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -77,8 +77,8 @@
         <input [(ngModel)]="temaSelecionado.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-        <button type="button" class="btn btn-primary" (click)='editarSelecionado()' data-dismiss="modal">Editar</button>
+        <button type="button" class="btn btn-secondary btn-simApagar" data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary botaoModalCentEdit btnCanc" (click)='editarSelecionado()' data-dismiss="modal">Editar</button>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title ft">Cadastrar</h5>
+        <h5 class="modal-title ft textoModalCad">Cadastrar</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -104,8 +104,8 @@
         <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-        <button type="button" class="btn btn-primary" (click)="cadastrarTema()" data-dismiss="modal">Cadastrar</button>
+        <button type="button" class="btn btn-secondary btn-simApagar pl-4 pr-4" data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary botaoModalCentCad btnCanc" (click)="cadastrarTema()" data-dismiss="modal">Cadastrar</button>
       </div>
     </div>
   </div>

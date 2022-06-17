@@ -5,7 +5,6 @@
 .ft{
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
-  font-size: 15px;
 }
 
 .btn-cadastrar{
@@ -38,20 +37,35 @@
 .btn-apagar:hover{
     background-color: white;
     color:#F16a4a;
+    border: none;
+
     
 }
 
+.btnCanc{
+  background-color:  #215df2;
+  border-color: #215df2;
+  color: #fdfefd;
+  border: none;
+}
+
+.btnCanc:hover{
+  background-color:#545454;
+  color: #fdfefd;
+  border: none;
+}
+
 .btn-simApagar{
-  background-color: #DC3545 !important;
+  background-color: #f16a4a !important;
   color: white !important;
-  border-color: #DC3545 !important;
+  border-color: #f16a4a !important;
   outline: none;
 }
 
 .btn-simApagar:hover{
-  background-color: #c62e3d !important;
+  background-color: #545454 !important;
   color: white !important;
-  border-color: #c62e3d !important;
+  border-color: #545454 !important;
 }
 
 .azulTema{
@@ -63,3 +77,29 @@
       background-size: 100%;
       background-attachment: fixed;
 } 
+
+.textoModalDelet{
+  margin-left: 210px;
+  margin-bottom: 0px;}
+
+.botaoModalCentDelet{
+  margin-right: 140px;
+}
+
+.textoModalEdit{
+  margin-left: 210px;
+  margin-bottom: 0px;}
+
+.botaoModalCentEdit{
+  margin-right: 160px;
+}
+
+.textoModalCad{
+  margin-left: 170px;
+  margin-bottom: 0px;}
+
+.botaoModalCentCad{
+  margin-right: 150px;
+}
+
+
