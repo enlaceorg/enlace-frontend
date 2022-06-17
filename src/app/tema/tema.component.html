@@ -1,10 +1,18 @@
-<div class="container-fluid fundo">
+<div class="container-fluid mb-3 fundo">
     <div class="row d-flex justify-content-center align-items-center mt-5">
       <div class="col-md-2 ">
-        <h1 class="azulTema d-flex justify-content-center">Temas</h1>
+        <h1 class="azulTema d-flex justify-content-center">temas</h1>
       </div>
-      <div class="col-md-4 ">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>	<input [(ngModel)]="tagTema" (keyup)="buscarPorNome()" name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+      <div class="col-md-4 d-flex align-items-center">
+
+        <div class="input-group mt-0">
+          <input [(ngModel)]="tagTema" (keyup)="buscarPorNome()" name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+          <div class="input-group-append">
+            <button class="btn bg-bl"><i class="fas fa-search c-white"></i></button>
+          </div>
+      </div>
+
+
       </div>
 
       <div class="container-fluid mt-5">
