@@ -24,6 +24,7 @@ import { BotaoPostagemComponent } from './botao-postagem/botao-postagem.componen
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component';
 import { FooterComponent } from './footer/footer.component';
+import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
 
 
 
@@ -50,7 +51,8 @@ import { FooterComponent } from './footer/footer.component';
     BotaoPostagemComponent,
     EncontreOngsComponent,
     VoltarAoTopoComponent,
-    FooterComponent
+    FooterComponent,
+    UsuarioEditarComponent
   ],
 
   imports: [
