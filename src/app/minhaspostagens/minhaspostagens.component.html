@@ -2,7 +2,7 @@
     <div class="row mt-5" >
       <div class="col-md-2"></div>
       <div class="col-md-7 d-flex justify-content-center" style="margin-top: 0px;">
-        <div class="card-columns">
+        <div class="card-columns" *ngIf='usuario.postagem?.length != 0'>
    
             <div class="card" *ngFor='let item of usuario.postagem'>
               <img class="card-img-top" src="{{ item.imagem }}" alt="Card image cap">
@@ -20,6 +20,20 @@
             </div> 
             
         </div>
+
+        <h2 *ngIf='usuario.postagem?.length == 0' class="text-center text-secondary mt-5">
+          Você não publicou nenhuma postagem ainda... Escreva a primeira!
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </h2>
+
       </div>
       <div class="col-md-3"></div>
     </div>
@@ -92,3 +106,5 @@
 </div>
 
 <!--Modal Editar-->
+
+<app-botao-postagem></app-botao-postagem>

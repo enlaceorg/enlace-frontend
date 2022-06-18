@@ -38,7 +38,7 @@ export class TemaComponent implements OnInit {
 
     if (environment.tipo != 'adm'){
       this.alertaService.showAlertDanger('Você precisa ser uma ONG para acessar essa página')
-      this.router.navigate(['/postagem'])
+      this.router.navigate(['/postagens'])
     }
 
     this.findAllTemas()
@@ -70,7 +70,7 @@ export class TemaComponent implements OnInit {
   apagarSelecionado(){
     this.temaService.deleteTema(this.temaSelecionado.temaId).subscribe(() =>{
       this.alertaService.showAlertSuccess('Tema apagado com sucesso')
-      this.router.navigate(['/tema'])
+      this.router.navigate(['/temas'])
       this.findAllTemas()
     })
   }
@@ -79,7 +79,7 @@ export class TemaComponent implements OnInit {
     this.temaService.putTema(this.temaSelecionado).subscribe((resp: Tema) => {
       this.tema = resp
       this.alertaService.showAlertSuccess('Tema atualizado com sucesso')
-      this.router.navigate(['/tema'])
+      this.router.navigate(['/temas'])
       this.findAllTemas()
     })
   }
