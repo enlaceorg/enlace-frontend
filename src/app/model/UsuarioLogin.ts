@@ -4,7 +4,7 @@ export class UsuarioLogin {
     public usuarioEmail: string;
     public senha: string;
     public imagemUrl: string;
+    public tipo: string;
     public criadoEm: Date;
     public token: string;
-    
 }

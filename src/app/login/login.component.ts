@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       environment.usuarioEmail = this.usuarioLogin.usuarioEmail
       environment.imagemUrl = this.usuarioLogin.imagemUrl
       environment.token = this.usuarioLogin.token
+      environment.tipo = this.usuarioLogin.tipo
 
       this.router.navigate(['/postagem'])
     }, err =>{

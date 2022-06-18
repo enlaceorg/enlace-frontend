@@ -30,7 +30,7 @@ export class BotaoPostagemComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
 
-
+  admin = environment.tipo
 
 
   constructor(private router: Router,
