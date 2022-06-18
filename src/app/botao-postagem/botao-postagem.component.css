@@ -5,8 +5,17 @@
   top: 400px;
 }
 
+.botao p {
+  font-family: 'Epilogue', sans-serif;
+}
+
+.publicar {
+  background-color:#f16a4a;
+  color: #fff;
+}
+
 .btn-personalizado{
-  background-color:#f16a4a ;
+  background-color:#f16a4a;
   width: 50px;
   height: 50px;
   z-index: 1;

@@ -1,13 +1,23 @@
-<div class="container-fluid fundo">
+<div class="container-fluid mb-3 fundo">
     <div class="row d-flex justify-content-center align-items-center mt-5">
-      <div class="col-md-2">
-        <h1 class="azulTema d-flex justify-content-center">Temas</h1>
-      </div>
-      <div>
-        <button type="submit" class="btn btn-cadastrar botaoborda pt-1 ml-2" data-toggle="modal" data-target="#cadastrar">Cadastrar</button>
+      <div class="col-md-2 ">
+        <h1 class="azulTema d-flex justify-content-center">temas</h1>
       </div>
 
-      <div class="container-fluid  mt-5">
+      <div class="col-md-4 d-flex align-items-center">
+
+        <div class="input-group mt-0">
+          <input [(ngModel)]="tagTema" (keyup)="buscarPorNome()" name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+          <div class="input-group-append">
+            <button class="btn bg-bl"><i class="fas fa-search c-white"></i></button>
+          </div>
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-AzulRedondo botaoborda pt-1 ml-2" data-toggle="modal" data-target="#cadastrar">Cadastrar</button>
+      </div>
+
+      <div class="container-fluid mt-5">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-6">
             <table class="table table-hover text-center">
@@ -23,7 +33,7 @@
                   <th>{{tema.tag}}</th>
                   <td>{{tema.descricao}}</td>
                   <td class="d-flex justify-content-end">
-                    <button class="btn btn-cadastrar botaoborda mr-3" data-toggle="modal"  data-target="#editar" (click)="selecionarTema(tema)">Editar</button>
+                    <button class="btn btn-AzulRedondo botaoborda mr-3" data-toggle="modal"  data-target="#editar" (click)="selecionarTema(tema)">Editar</button>
                     <button class="btn btn-apagar" data-toggle="modal" data-target="#confirmaDeletar" (click)="selecionarTema(tema)">Apagar</button>
                   </td>
                 </tr>
@@ -31,6 +41,10 @@
             </table>
           </div>
         </div>
+      </div>
+
+      <div class="mt-3">
+        <button type="submit" class="btn btn-cadastrar botaoborda pt-1 ml-2" data-toggle="modal" data-target="#cadastrar">Cadastrar</button>
       </div>
     </div>
   </div>
@@ -50,8 +64,8 @@
         <p style="text-align: center;" class="mt-3">Todos as postagens relacionadas serão deletadas também, deseja continuar?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnCanc" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-simApagar botaoModalCentDelet" (click)="apagarSelecionado()" data-dismiss="modal">Apagar</button>
+        <button type="button" class="btn btn-Azul " data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-Laranja botaoModalCentDelet" (click)="apagarSelecionado()" data-dismiss="modal">Apagar</button>
       </div>
     </div>
   </div>
@@ -77,8 +91,8 @@
         <input [(ngModel)]="temaSelecionado.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-simApagar" data-dismiss="modal">Voltar</button>
-        <button type="button" class="btn btn-primary botaoModalCentEdit btnCanc" (click)='editarSelecionado()' data-dismiss="modal">Editar</button>
+        <button type="button" class="btn btn-secondary btn-Laranja" data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-Azul botaoModalCentEdit " (click)='editarSelecionado()' data-dismiss="modal">Editar</button>
       </div>
     </div>
   </div>
@@ -104,8 +118,8 @@
         <input [(ngModel)]="tema.descricao" type="text" class="form-control " placeholder="Digite a descrição do tema" />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-simApagar pl-4 pr-4" data-dismiss="modal">Voltar</button>
-        <button type="button" class="btn btn-primary botaoModalCentCad btnCanc" (click)="cadastrarTema()" data-dismiss="modal">Cadastrar</button>
+        <button type="button" class="btn btn-secondary btn-Laranja pl-4 pr-4" data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-Azul botaoModalCentCad" (click)="cadastrarTema()" data-dismiss="modal">Cadastrar</button>
       </div>
     </div>
   </div>

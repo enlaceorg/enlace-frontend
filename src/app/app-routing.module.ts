@@ -10,6 +10,7 @@ import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.comp
 import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
 import { FooterComponent } from './footer/footer.component';
+import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
 
 const routes: Routes = [
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:"encontreongs", component: EncontreOngsComponent},
   {path:"minhaspostagens/apagar/:id", component: MinhaspostagensComponent},
   {path:"minhaspostagens/editar/:id", component: PostagemEditarComponent},
-  {path: "rodape", component: FooterComponent}
+  {path: "rodape", component: FooterComponent},
+  {path: "usuarios/editar/:id", component: UsuarioEditarComponent},
 ];
 
 @NgModule({

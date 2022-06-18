@@ -7,6 +7,7 @@ import { PostagemService } from '../service/postagem.service';
 import { Router } from '@angular/router';
 import { TemaService } from '../service/tema.service';
 import { AuthService } from '../service/auth.service';
+import { AlertaService } from '../service/alerta.service';
 
 
 @Component({
@@ -30,23 +31,26 @@ export class BotaoPostagemComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
 
+  admin = environment.tipo
 
 
-
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private alertaService: AlertaService
+    ) { }
 
   ngOnInit() {
     if (environment.token == '') {
-      // alert('Sua seção expirou, faça o login novamente');
+      this.alertaService.showAlertInfo('Sua sessão expirou, faça o login novamente');
       this.router.navigate(['/entrar']);
     }
+
     this.authService.refreshToken();
     this.getAllTemas();
     this.opacidade();
-
   }
 
   opacidade() {
@@ -60,8 +64,6 @@ export class BotaoPostagemComponent implements OnInit {
   mostrarBotao() {
     this.mostra = true
     this.display = "block"
-
-
   }
 
   ocultarBotao() {
@@ -121,7 +123,7 @@ export class BotaoPostagemComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe({
       next: (resp: Postagem) => {
         this.postagem = resp
-        alert('Publicação realizada com sucesso!')
+        this.alertaService.showAlertSuccess('Publicação realizada com sucesso!')
         this.postagem = new Postagem()
         this.getAllPostagem()
       }

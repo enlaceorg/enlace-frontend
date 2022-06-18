@@ -1,7 +1,7 @@
-
-
-<div class="container">
+<div class="container-fluid fundo">
     <div class="row">
+
+        <div class="col-md-1"></div>
 
         <div class="col-md-6">
             <div>
@@ -10,42 +10,31 @@
                 </h1>
             </div>
 
-            <div class="input-group mb-3 mt-0">
+            <div class="col-md-9 input-group mb-3 mt-0 p-0">
                 <input type="text" class="form-control">
-                <div class="input-group-append"><button class="btn btn-warning"><i class="fas fa-search"></i></button>
+                <div class="input-group-append"><button class="btn btn-warning ml-1">
+                        <i class="fas fa-search"></i></button>
                 </div>
             </div>
 
-
-            <div class="card-block">
-                <ng-container *ngFor="let usuario of usuarios">
-                    <div class="card right mt-4" *ngIf="usuario.tipo == 'normal'">
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <img class="d-block" id="fotocard" src="{{usuario.imagemUrl}}" alt="mulher com bolo">
-                            </div>
-                            <div class="col-sm-7 corpocard">
-                                <div class="card-block">
-                                    <h3>{{usuario.nome}}</h3>
-                                    <h5>{{usuario.usuarioEmail}}</h5>
-                                    <br>
-            
-                                </div>
-                            </div>
-                        </div>
-            
+            <div class="card mb-3 tamanhocard" *ngFor="let usuario of listaUsuariosOng" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{usuario.imagemUrl}}" class="card-img tamanhofoto" alt="...">
                     </div>
-                </ng-container>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{usuario.nome}}</h5>
+                            <h4 class="card-title">{{usuario.tipo}}</h4>
+                            <h6 class="card-text">{{usuario.usuarioEmail}}</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-
         </div>
 
-        <div class="col-md-5 imagem">
-            <img class="" src="https://i.imgur.com/j0ftxO0.jpg" alt="">
-        </div>
-
+        <div class="col-md-5"></div>
 
     </div>
-
 </div>

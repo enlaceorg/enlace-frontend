@@ -7,4 +7,5 @@ export const environment = {
   senha: '',
   imagemUrl: '',
   criadoEm: '',
+  tipo: ''
 };

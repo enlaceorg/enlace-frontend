@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
+import { AlertaService } from '../service/alerta.service';
 import { PostagemService } from '../service/postagem.service';
 
 @Component({
@@ -18,13 +19,14 @@ export class PostagemApagarComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
+    private alertaService: AlertaService
   ) { }
 
   ngOnInit() {
 
     window.scroll(0,0)
 
-    if(environment.token == ''){
+    if (environment.token == ''){
       this.router.navigate(['/entrar'])
     }
 
@@ -38,10 +40,9 @@ export class PostagemApagarComponent implements OnInit {
     })
   }
 
-
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
-      alert('Postagem apagada com sucesso!')
+      this.alertaService.showAlertSuccess('Postagem apagada com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }

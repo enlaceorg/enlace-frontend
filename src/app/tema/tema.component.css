@@ -1,3 +1,5 @@
+/*Fonte*/
+
 .fs-54 {
   font-size: 54px;
 }
@@ -7,19 +9,64 @@
   font-weight: 400;
 }
 
-.btn-cadastrar{
+/*Fonte*/
+
+/*--------------------------------------------------------------------------------------------------*/
+
+.fundo{
+background-image: url(https://i.imgur.com/miHbfgN.jpg);  
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+} 
+
+.azulTema{
+  color:#215DF2;
+}
+
+input{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+/*Botões*/
+
+.btn-AzulRedondo{
     background-color: #215DF2 ;
     color: white;
     border-radius: 50px;
     outline: none;
 }
 
-.btn-cadastrar:hover{
+.btn-AzulRedondo:hover{
     background-color: white;
     color:#215DF2;
-    
+
 }
 
+.bg-bl {
+  background-color: #215df3;
+}
+
+.c-white{
+  color: white;
+}
+
+.btn-Azul{
+  background-color: #215DF2 ;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.btn-Azul:hover{
+  background-color: white;
+  color:#215DF2;
+  border: none;
+}
 
 
 .botaoborda{
@@ -37,46 +84,38 @@
 .btn-apagar:hover{
     background-color: white;
     color:#F16a4a;
-    border: none;
-
-    
 }
 
-.btnCanc{
+.btn-Laranja{
   background-color:  #215df2;
   border-color: #215df2;
   color: #fdfefd;
   border: none;
 }
 
-.btnCanc:hover{
+.btn-Laranja:hover{
   background-color:#545454;
   color: #fdfefd;
   border: none;
 }
 
-.btn-simApagar{
+.btn-Laranja{
   background-color: #f16a4a !important;
   color: white !important;
   border-color: #f16a4a !important;
   outline: none;
+  border: none;
 }
 
-.btn-simApagar:hover{
+.btn-Laranja:hover{
   background-color: #545454 !important;
   color: white !important;
   border-color: #545454 !important;
 }
 
-.azulTema{
-    color:#215DF2;
-}
-.fundo{
-  background-image: url(https://i.imgur.com/miHbfgN.jpg);  
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-attachment: fixed;
-} 
+/*Botões*/
+
+/*Modal*/
 
 .textoModalDelet{
   margin-left: 210px;
@@ -84,6 +123,19 @@
 
 .botaoModalCentDelet{
   margin-right: 140px;
+}
+
+.fundo{
+  background-image: url(https://i.imgur.com/miHbfgN.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+}
+
+#txt_consulta {
+  background-color:#d9d8da;
+  border: none;
+  
 }
 
 .textoModalEdit{
@@ -102,4 +154,4 @@
   margin-right: 150px;
 }
 
-
+/*Modal*/

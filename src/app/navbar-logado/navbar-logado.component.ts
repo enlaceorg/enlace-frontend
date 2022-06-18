@@ -10,6 +10,9 @@ import { environment } from 'src/environments/environment.prod';
 export class NavbarLogadoComponent implements OnInit {
   nome = environment.nome
   foto = environment.imagemUrl 
+  id = environment.usuarioId
+
+
   constructor(
     private router: Router
   ) { }
