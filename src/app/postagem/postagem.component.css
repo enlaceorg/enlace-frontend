@@ -47,4 +47,14 @@ body{
   .imagem-lateral{
       width: auto;
   }
+
+.font {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+}
+
+
+.fontData{
+  font-size: 13px;
+  margin-right: 5px;
 }
