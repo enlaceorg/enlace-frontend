@@ -7,6 +7,7 @@ import { Postagem } from '../model/Postagem';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 import { TemaService } from '../service/tema.service';
+import { AlertaService } from '../service/alerta.service';
 
 @Component({
   selector: 'app-minhaspostagens',
@@ -30,15 +31,17 @@ export class MinhaspostagensComponent implements OnInit {
     public route: ActivatedRoute,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private alertaService: AlertaService
+    ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
     if (environment.token == '') {
-      // alert('Sua seção expirou, faça o login novamente');
+      this.alertaService.showAlertInfo('Sua sessão expirou, faça o login novamente');
       this.router.navigate(['/entrar']);
     }
-    //this.authService.refreshToken();
+    
     this.idPost = this.route.snapshot.params['id']
     this.findByIdPostagem(this.idPost)
     this.getAllPostagem();
@@ -78,7 +81,7 @@ export class MinhaspostagensComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert("Postagem realizada com sucesso!")
+      this.alertaService.showAlertSuccess("Postagem realizada com sucesso!")
       this.postagem = new Postagem()
     })
   }
@@ -91,7 +94,7 @@ export class MinhaspostagensComponent implements OnInit {
 
   apagarSelecionada() {
     this.postagemService.deletePostagem(this.postagemSelecionada.postagemId).subscribe(() => {
-      alert('Postagem apagada com sucesso!')
+      this.alertaService.showAlertSuccess('Postagem apagada com sucesso!')
       this.idPost = this.route.snapshot.params['id']
       this.findByIdPostagem(this.idPost)
       this.getAllPostagem();
@@ -113,7 +116,7 @@ export class MinhaspostagensComponent implements OnInit {
     this.tema.temaId = this.idTema
     this.postagemService.putPostagem(this.postagemSelecionada).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem atualizada com sucesso!')
+      this.alertaService.showAlertSuccess('Postagem atualizada com sucesso!')
       this.findByIdPostagem(this.idPost)
       this.getAllPostagem();
       this.getAllTemas();

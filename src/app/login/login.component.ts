@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AlertaService } from '../service/alerta.service';
 import { AuthService } from '../service/auth.service';
 ;
 
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor( 
     private authService: AuthService,
+    private alertaService: AlertaService,
     private router: Router
   ) { }
 
@@ -38,7 +40,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/postagem'])
     }, err =>{
       if(err.status == 500 || err.status == 401) {
-        alert("Usuário não encontrado ou senha incorreta")
+        this.alertaService.showAlertInfo("Usuário não encontrado ou senha incorreta")
       }
     })
   }

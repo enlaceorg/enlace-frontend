@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
+import { AlertaService } from '../service/alerta.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -19,9 +20,10 @@ export class TemaComponent implements OnInit {
 
 
   constructor(
-private router: Router,
-private temaService: TemaService,
-private route: ActivatedRoute
+    private router: Router,
+    private temaService: TemaService,
+    private route: ActivatedRoute,
+    private alertaService: AlertaService,
   ) { }
   
 
@@ -31,7 +33,7 @@ private route: ActivatedRoute
     }
 
     if (environment.tipo != 'adm'){
-      alert('Você precisa ser uma ONG para acessar essa página')
+      this.alertaService.showAlertDanger('Você precisa ser uma ONG para acessar essa página')
       this.router.navigate(['/postagem'])
     }
 
@@ -55,7 +57,7 @@ private route: ActivatedRoute
   cadastrarTema(){
  this.temaService.postTema(this.tema).subscribe((resp: Tema)=> {
       this.tema = resp
-      alert("Tema cadastrado com sucesso")
+      this.alertaService.showAlertSuccess("Tema cadastrado com sucesso")
       this.findAllTemas()
       this.tema = new Tema()
     }) 
@@ -63,7 +65,7 @@ private route: ActivatedRoute
 
   apagarSelecionado(){
     this.temaService.deleteTema(this.temaSelecionado.temaId).subscribe(() =>{
-      alert('Tema apagado com sucesso')
+      this.alertaService.showAlertSuccess('Tema apagado com sucesso')
       this.router.navigate(['/tema'])
       this.findAllTemas()
     })
@@ -72,7 +74,7 @@ private route: ActivatedRoute
   editarSelecionado(){
     this.temaService.putTema(this.temaSelecionado).subscribe((resp: Tema)=>{
       this.tema = resp
-      alert('Tema atualizado com sucesso')
+      this.alertaService.showAlertSuccess('Tema atualizado com sucesso')
       this.router.navigate(['/tema'])
       this.findAllTemas()
     })
