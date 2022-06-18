@@ -1,3 +1,5 @@
+/*Fonte*/
+
 .fs-54 {
   font-size: 54px;
 }
@@ -5,17 +7,41 @@
 .ft{
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
-  font-size: 15px;
 }
 
-.btn-cadastrar{
+/*Fonte*/
+
+/*--------------------------------------------------------------------------------------------------*/
+
+.fundo{
+background-image: url(https://i.imgur.com/miHbfgN.jpg);  
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+} 
+
+.azulTema{
+  color:#215DF2;
+}
+
+input{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+/*Botões*/
+
+.btn-AzulRedondo{
     background-color: #215DF2 ;
     color: white;
     border-radius: 50px;
     outline: none;
 }
 
-.btn-cadastrar:hover{
+.btn-AzulRedondo:hover{
     background-color: white;
     color:#215DF2;
 
@@ -29,6 +55,18 @@
   color: white;
 }
 
+.btn-Azul{
+  background-color: #215DF2 ;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.btn-Azul:hover{
+  background-color: white;
+  color:#215DF2;
+  border: none;
+}
 
 
 .botaoborda{
@@ -46,25 +84,47 @@
 .btn-apagar:hover{
     background-color: white;
     color:#F16a4a;
-
 }
 
-.btn-simApagar{
-  background-color: #DC3545 !important;
+.btn-Laranja{
+  background-color:  #215df2;
+  border-color: #215df2;
+  color: #fdfefd;
+  border: none;
+}
+
+.btn-Laranja:hover{
+  background-color:#545454;
+  color: #fdfefd;
+  border: none;
+}
+
+.btn-Laranja{
+  background-color: #f16a4a !important;
   color: white !important;
-  border-color: #DC3545 !important;
+  border-color: #f16a4a !important;
   outline: none;
+  border: none;
 }
 
-.btn-simApagar:hover{
-  background-color: #c62e3d !important;
+.btn-Laranja:hover{
+  background-color: #545454 !important;
   color: white !important;
-  border-color: #c62e3d !important;
+  border-color: #545454 !important;
 }
 
-.azulTema{
-    color:#215DF2;
+/*Botões*/
+
+/*Modal*/
+
+.textoModalDelet{
+  margin-left: 210px;
+  margin-bottom: 0px;}
+
+.botaoModalCentDelet{
+  margin-right: 140px;
 }
+
 .fundo{
   background-image: url(https://i.imgur.com/miHbfgN.jpg);
       background-repeat: no-repeat;
@@ -77,3 +137,21 @@
   border: none;
   
 }
+
+.textoModalEdit{
+  margin-left: 210px;
+  margin-bottom: 0px;}
+
+.botaoModalCentEdit{
+  margin-right: 160px;
+}
+
+.textoModalCad{
+  margin-left: 170px;
+  margin-bottom: 0px;}
+
+.botaoModalCentCad{
+  margin-right: 150px;
+}
+
+/*Modal*/
