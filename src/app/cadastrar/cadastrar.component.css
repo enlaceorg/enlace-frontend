@@ -32,10 +32,6 @@ nav {
   font-weight: 400;
 }
 
-.voltar:hover{
-  
-}
-
 nav img {
   width: 50px;
   height: 50px;
@@ -99,6 +95,7 @@ label {
   transition: all .3s;
   font-size: 23px;
   color: #545454;
+  outline: none;
 }
 
 .btnEnv:hover {
