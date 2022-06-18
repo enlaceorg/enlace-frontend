@@ -26,7 +26,7 @@ export class CadastrarComponent implements OnInit {
 
   padronizarFoto(){
     if(this.usuario.imagemUrl == null){
-      this.usuario.imagemUrl = 'https://i.pinimg.com/originals/78/2a/96/782a9625ef88b770e4639ca75e39341e.jpg'
+      this.usuario.imagemUrl = 'https://i.imgur.com/6mvsS7f.png'
     }
   }
 
