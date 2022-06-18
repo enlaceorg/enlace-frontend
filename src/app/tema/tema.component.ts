@@ -33,7 +33,10 @@ export class TemaComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    console.log(environment.token)
+    if (environment.tipo != 'adm'){
+      alert('Você precisa ser uma ONG para acessar essa página')
+      this.router.navigate(['/postagem'])
+    }
 
     this.findAllTemas()
     this.idTema = this.route.snapshot.params['temaId']

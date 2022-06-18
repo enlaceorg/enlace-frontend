@@ -11,9 +11,8 @@
       <p [ngStyle]="{opacity:opacity}">Adicionar publicação</p>
     </div>
   </div>
-  <div class="mt-3  d-flex justify-content-start align-items-baseline">
+  <div class="mt-3  d-flex justify-content-start align-items-baseline" *ngIf="admin == 'adm'">
     <div>
-
       <button routerLink="/tema" class="btn btn-personalizado rounded-circle mr-2" [ngStyle]="{ display: display }"
         id="btn-secundario">
         <i class="fa fa-pencil" aria-hidden="true"></i>
