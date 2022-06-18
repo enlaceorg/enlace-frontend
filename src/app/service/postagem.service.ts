@@ -17,19 +17,23 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]> {
-    return this.http.get<Postagem[]>('https://enlaceorg.herokuapp.com/postagens', this.token);
+    return this.http.get<Postagem[]>('https://enlaceorg.herokuapp.com/postagens',
+    {headers: new HttpHeaders().set('Authorization', environment.token)});
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.post<Postagem>('https://enlaceorg.herokuapp.com/postagens', postagem, this.token);
+    return this.http.post<Postagem>('https://enlaceorg.herokuapp.com/postagens', postagem, 
+    {headers: new HttpHeaders().set('Authorization', environment.token)});
   }
 
   getByIdPostagem(id: number): Observable<Postagem> {
-    return this.http.get<Postagem>(`https://enlaceorg.herokuapp.com/postagens/${id}`, this.token)
+    return this.http.get<Postagem>(`https://enlaceorg.herokuapp.com/postagens/${id}`, 
+    {headers: new HttpHeaders().set('Authorization', environment.token)})
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem> {
-    return this.http.put<Postagem>('https://enlaceorg.herokuapp.com/postagens', postagem, this.token)
+    return this.http.put<Postagem>('https://enlaceorg.herokuapp.com/postagens', postagem, 
+    {headers: new HttpHeaders().set('Authorization', environment.token)})
   }
 
   deletePostagem(id: number) {
