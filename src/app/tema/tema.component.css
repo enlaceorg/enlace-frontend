@@ -44,7 +44,15 @@ input{
 .btn-AzulRedondo:hover{
     background-color: white;
     color:#215DF2;
-    
+
+}
+
+.bg-bl {
+  background-color: #215df3;
+}
+
+.c-white{
+  color: white;
 }
 
 .btn-Azul{
@@ -75,7 +83,7 @@ input{
 
 .btn-apagar:hover{
     background-color: white;
-    color:#F16a4a;    
+    color:#F16a4a;
 }
 
 .btn-Laranja{
@@ -115,6 +123,19 @@ input{
 
 .botaoModalCentDelet{
   margin-right: 140px;
+}
+
+.fundo{
+  background-image: url(https://i.imgur.com/miHbfgN.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+}
+
+#txt_consulta {
+  background-color:#d9d8da;
+  border: none;
+  
 }
 
 .textoModalEdit{

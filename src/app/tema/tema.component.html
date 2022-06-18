@@ -1,13 +1,23 @@
-<div class="container-fluid fundo">
+<div class="container-fluid mb-3 fundo">
     <div class="row d-flex justify-content-center align-items-center mt-5">
-      <div class="col-md-2">
-        <h1 class="azulTema d-flex justify-content-center">Temas</h1>
+      <div class="col-md-2 ">
+        <h1 class="azulTema d-flex justify-content-center">temas</h1>
       </div>
+
+      <div class="col-md-4 d-flex align-items-center">
+
+        <div class="input-group mt-0">
+          <input [(ngModel)]="tagTema" (keyup)="buscarPorNome()" name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+          <div class="input-group-append">
+            <button class="btn bg-bl"><i class="fas fa-search c-white"></i></button>
+          </div>
+      </div>
+
       <div>
         <button type="submit" class="btn btn-AzulRedondo botaoborda pt-1 ml-2" data-toggle="modal" data-target="#cadastrar">Cadastrar</button>
       </div>
 
-      <div class="container-fluid  mt-5">
+      <div class="container-fluid mt-5">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-6">
             <table class="table table-hover text-center">
@@ -31,6 +41,10 @@
             </table>
           </div>
         </div>
+      </div>
+
+      <div class="mt-3">
+        <button type="submit" class="btn btn-cadastrar botaoborda pt-1 ml-2" data-toggle="modal" data-target="#cadastrar">Cadastrar</button>
       </div>
     </div>
   </div>
