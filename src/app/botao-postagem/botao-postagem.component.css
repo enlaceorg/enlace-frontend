@@ -36,9 +36,53 @@ p{
   font-size: 17px;
 }
 
-
-
 i {
   color: white;
+}
+
+
+.btn-Laranja{
+  background-color: #f16a4a !important;
+  color: white !important;
+  border-color: #f16a4a !important;
+  outline: none;
+  border: none;
+}
+
+.btn-Laranja:hover{
+  background-color: #545454 !important;
+  color: white !important;
+  border-color: #545454 !important;
+}
+
+.btn-Azul{
+  background-color: #215DF2 ;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.btn-Azul:hover{
+  background-color: #545454;
+  color:white;
+  border: none;
+}
+
+input, textarea{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+.ft{
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+}
+
+.modal-title{
+  margin-left: 145px;
+}
+
+.btnMargin {
+  margin-right: 150px;
 }
 
