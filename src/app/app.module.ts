@@ -16,8 +16,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MinhaspostagensComponent } from './minhaspostagens/minhaspostagens.component';
 import { BotaoAcoesComponent } from './botao-acoes/botao-acoes.component';
 import { PostagemComponent } from './postagem/postagem.component';
-import { PostagemEditarComponent } from './postagem-editar/postagem-editar.component';
-import { PostagemApagarComponent } from './postagem-apagar/postagem-apagar.component';
 import { NavbarLogadoComponent } from './navbar-logado/navbar-logado.component';
 import { TemaComponent } from './tema/tema.component';
 import { BotaoPostagemComponent } from './botao-postagem/botao-postagem.component';
@@ -27,9 +25,6 @@ import { FooterComponent } from './footer/footer.component';
 import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
 import { AlertaComponent } from './alerta/alerta.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
-
-
 
 @NgModule({
   declarations: [
@@ -45,8 +40,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     MinhaspostagensComponent,
     BotaoAcoesComponent,
     PostagemComponent,
-    PostagemEditarComponent,
-    PostagemApagarComponent,
     NavbarLogadoComponent,
     TemaComponent,
     EncontreOngsComponent,

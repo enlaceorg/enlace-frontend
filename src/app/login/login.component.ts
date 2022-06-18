@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       environment.token = this.usuarioLogin.token
       environment.tipo = this.usuarioLogin.tipo
 
-      this.router.navigate(['/postagem'])
+      this.router.navigate(['/postagens'])
     }, err =>{
       if(err.status == 500 || err.status == 401) {
         this.alertaService.showAlertInfo("Usuário não encontrado ou senha incorreta")
