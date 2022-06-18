@@ -25,6 +25,8 @@ import { EncontreOngsComponent } from './encontre-ongs/encontre-ongs.component';
 import { VoltarAoTopoComponent } from './voltar-ao-topo/voltar-ao-topo.component';
 import { FooterComponent } from './footer/footer.component';
 import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
+import { AlertaComponent } from './alerta/alerta.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -52,7 +54,8 @@ import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.componen
     EncontreOngsComponent,
     VoltarAoTopoComponent,
     FooterComponent,
-    UsuarioEditarComponent
+    UsuarioEditarComponent,
+    AlertaComponent
   ],
 
   imports: [
@@ -60,7 +63,8 @@ import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.componen
     AppRoutingModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [
     {

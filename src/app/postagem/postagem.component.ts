@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
+import { AlertaService } from '../service/alerta.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -26,19 +27,23 @@ export class PostagemComponent implements OnInit {
 
 
 
-  constructor(public router: Router, private postagemService: PostagemService, private temaService: TemaService, private authService: AuthService) { }
+  constructor(
+    public router: Router, 
+    private postagemService: PostagemService, 
+    private temaService: TemaService, 
+    private authService: AuthService,
+    private alertaService: AlertaService
+    ) { }
 
   ngOnInit() {
     if (environment.token == '') {
-      // alert('Sua seção expirou, faça o login novamente');
+      this.alertaService.showAlertInfo('Sua sessão expirou, faça o login novamente');
       this.router.navigate(['/entrar']);
     }
+    
     this.authService.refreshToken();
     this.getAllPostagem();
     this.getAllTemas();
-
-
-
   }
 
 

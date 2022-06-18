@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
+import { AlertaService } from '../service/alerta.service';
 import { AuthService } from '../service/auth.service';
 import { UsuarioService } from '../service/usuario.service';
 
@@ -21,7 +22,8 @@ export class UsuarioEditarComponent implements OnInit {
     private authService: AuthService,
     private usuarioService: UsuarioService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertaService: AlertaService
   ) { }
 
   ngOnInit() {
@@ -43,20 +45,16 @@ export class UsuarioEditarComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
-  ocultarNavbar() {
-    true
-  }
-
   atualizar() {
     this.usuario.postagem = []
 
     if (this.usuario.senha != this.senhaDigitada) {
-      alert('Senhas digitadas estão diferentes')
+      this.alertaService.showAlertDanger('Senhas digitadas estão diferentes')
     } else {
       this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/signin'])
-        alert('Usuário atualizado. Faça o login novamente para ver as alterações.')
+        this.alertaService.showAlertSuccess('Usuário atualizado. Faça o login novamente para ver as alterações.')
         environment.token = ''
         environment.nome = ''
         environment.imagemUrl = ''
