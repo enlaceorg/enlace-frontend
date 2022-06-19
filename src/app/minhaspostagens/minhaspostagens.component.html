@@ -87,7 +87,7 @@
   
         <div class="form-group txcad">
           <label for="texto">Escolha um tema: </label>
-          <select name="tema" id="tema" class="form-control" [(ngModel)]='postagemSelecionada.tema' (change)='findByIdTema()'>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
             <option *ngFor='let item of listaTemas' value="{{item.temaId}}">
               {{item.tag}}
             </option>
