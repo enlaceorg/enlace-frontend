@@ -73,10 +73,6 @@ input, textarea{
   border: #F4F4F4;
 }
 
-.ft{
-  font-family: 'Epilogue', sans-serif;
-  font-weight: 400;
-}
 
 .modal-title{
   margin-left: 145px;
@@ -89,6 +85,18 @@ input, textarea{
 select{
   background-color: #F4F4F4;
   border: #F4F4F4;
+}
+
+.ft{
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+  color: #545454;
+}
+
+h5{
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+  color: #545454;
 }
 
 

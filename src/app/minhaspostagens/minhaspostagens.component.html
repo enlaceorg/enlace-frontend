@@ -42,8 +42,8 @@
 
 <!--Modal Apagar-->
 <div class="modal" tabindex="-1" id="modal-apagar">
-  <div class="modal-dialog font">
-    <div class="modal-content textoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
       <div class="modal-header ">
         <h5 class="modal-center textoModal">Apagar Postagem</h5>
         <button type="button" class="close x" data-dismiss="modal" aria-label="Close">
@@ -65,8 +65,8 @@
 <!--Modal Editar-->
 
 <div class="modal" tabindex="-1" id="modal-editar">
-  <div class="modal-dialog font">
-    <div class="modal-content textoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title textoModal">Editar Postagem</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -75,17 +75,17 @@
       </div>
       <div class="modal-body">
 
-        <div class="form-group">
+        <div class="form-group txcad">
           <label for="titulo">Imagem:</label>
           <input [(ngModel)]='postagemSelecionada.imagem' type="text" class="form-control" id="Imagem" placeholder="Cole o link da imagem">
         </div>
   
-        <div class="form-group">
+        <div class="form-group txcad">
           <label for="texto">Texto:</label>
           <textarea [(ngModel)]='postagemSelecionada.conteudo' class="form-control" name="texto" id="texto" rows="3"></textarea>
         </div>
   
-        <div class="form-group">
+        <div class="form-group txcad">
           <label for="texto">Escolha um tema: </label>
           <select name="tema" id="tema" class="form-control" [(ngModel)]='postagemSelecionada.tema' (change)='findByIdTema()'>
             <option *ngFor='let item of listaTemas' value="{{item.temaId}}">

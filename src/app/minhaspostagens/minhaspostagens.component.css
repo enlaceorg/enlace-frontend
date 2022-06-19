@@ -90,7 +90,9 @@
 .textoModal{
   font-family: 'Epilogue', sans-serif;
   margin-left: 150px;
-  margin-bottom: 0px;}
+  margin-bottom: 0px;
+  color: #545454;
+}
 
 .botaoModalCent{
   margin-right: 140px;
@@ -115,6 +117,13 @@ textarea{
 select{
   background-color: #F4F4F4;
   border: #F4F4F4;
+}
+
+.txcad{
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+  color: #545454;
+  
 }
 
 /*Deixa os fundos cinza*/
