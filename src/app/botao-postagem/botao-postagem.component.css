@@ -86,3 +86,9 @@ input, textarea{
   margin-right: 150px;
 }
 
+select{
+  background-color: #F4F4F4;
+  border: #F4F4F4;
+}
+
+
