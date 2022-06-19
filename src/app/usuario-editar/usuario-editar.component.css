@@ -89,18 +89,35 @@ label {
 
 
 .btnEnv {
-    background-color: #CCCBCC;
+    background-color: #215df2;
     width: 100%;
     border-radius: 50px;
     padding: 10px;
     border: none;
     transition: all .3s;
     font-size: 23px;
-    color: #545454;
+    color: white;
 }
 
 .btnEnv:hover {
-    background-color: #215df2;
+    background-color: #545454;
+    color: #fdfefd;
+
+}
+
+.btnCan {
+    background-color: #f16a4a;
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    transition: all .3s;
+    font-size: 23px;
+    color: white;
+}
+
+.btnCan:hover {
+    background-color: #545454;
     color: #fdfefd;
 
 }

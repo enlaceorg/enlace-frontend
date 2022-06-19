@@ -3,6 +3,10 @@ body{
     overflow-x:hidden;
     overflow-y:hidden;
 }
+.mt{
+    margin-top: 150px;
+    
+}
 
 .firstParagraph {
     margin-top: 130px;
@@ -24,13 +28,14 @@ body{
 p{
     color: #545454;
     font-family: 'Epilogue', sans-serif;
-    font-weight: light;
-    font-size: 17px;
+    font-weight: 400;
+    font-size: 19px;
 }
 
 .img1 {
+    align-items: rounded;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 80px;
     float: left;
     width: 140px;
     height: 140px;
@@ -44,7 +49,7 @@ p{
 
 .img2 {
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 38px;
     float: left;
     width: 120px;
     height: 90px;
@@ -57,7 +62,7 @@ p{
 }
 
 .img3 {
-    margin-left: 25px;
+    margin-left: 70px;
     float: left;
     width: 170px;
     height: 140px;
@@ -83,4 +88,6 @@ h1 {
 
 .sobreNosEsp{
     line-height: 1;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
 }
