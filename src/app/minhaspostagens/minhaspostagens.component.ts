@@ -110,6 +110,7 @@ export class MinhaspostagensComponent implements OnInit {
     this.postagemSelecionada.conteudo = postagem.conteudo
     this.postagemSelecionada.tema = postagem.tema
     this.postagemSelecionada.usuario = postagem.usuario
+    this.idTema = postagem.tema.temaId
   }
 
   atualizarSelecionada() {
