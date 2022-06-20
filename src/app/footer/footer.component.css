@@ -2,7 +2,10 @@
     margin-top: 25vh;
     width: 205vh;
     height: 200px;
-    color: #d6d6d6;
+    color: #545454;
+}
+footer{
+    background-color:#54545423 !important;
 }
 
 .logo-footer {
@@ -15,19 +18,21 @@
     color: #545454;
     font-family: 'Epilogue', sans-serif;
     font-weight: light;
-    font-size: 18pt;
+    font-size: 13pt;
+    line-height: 1;
 }
 
 .p-b {
     color: #545454;
     font-family: 'Epilogue', sans-serif;
     font-weight: light;
-    font-size: 18pt;
+    font-size: 13pt;
+    line-height: 1;
 }
 
 .fa-brands {
     margin-left: 10px;
-    font-size: 20pt;
+    font-size: 13pt;
     color: #545454;
 }
 
