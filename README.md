@@ -11,7 +11,7 @@ Acesse o site, clicando [aqui](https://enlaceorg.netlify.app/)
 
 # O problema social trabalhado
 
-Entre os 17 Objetivos de Desenvolvimento Sustentável da Organização das Nações Unidas (ONU), o primeiro objetivo é a “Erradicação da Pobreza”, cujo a meta número um é “Acabar com a pobreza em todas as suas formas, em todos os lugares”. Tentar contribuir para atingir esse objetivo através da tecnologia apresenta uma complexidade ainda maior, dado que pessoas em extrema pobreza muitas vezes não têm acesso a recursos tecnológicos, tais como celulares e internet. 
+Entre os 17 Objetivos de Desenvolvimento Sustentável da Organização das Nações Unidas (ONU), o primeiro objetivo é a “Erradicação da Pobreza”, cujo a meta número um é “Acabar com a pobreza em todas as suas formas, em todos os lugares”. Tentar contribuir para atingir esse objetivo através da tecnologia apresenta uma complexidade ainda maior, dado que pessoas em extrema pobreza podem não ter acesso a recursos tecnológicos, tais como celulares e internet. 
 
 
 # Motivação do grupo para resolução desse problema
